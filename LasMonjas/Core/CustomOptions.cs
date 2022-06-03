@@ -39,7 +39,7 @@ namespace LasMonjas.Core
             this.type = type;
             selection = 0;
             if (id != 0) {
-                entry = LasMonjasPlugin.Instance.Config.Bind($"Preset{preset}", id.ToString(), defaultSelection);
+                entry = LasMonjasPlugin.Instance.Config.Bind($"预设{preset}", id.ToString(), defaultSelection);
                 selection = Mathf.Clamp(entry.Value, 0, selections.Length - 1);
             }
             options.Add(this);
@@ -57,7 +57,7 @@ namespace LasMonjas.Core
         }
 
         public static CustomOption Create(int id, string name, String type, bool defaultValue, CustomOption parent = null, bool isHeader = false) {
-            return new CustomOption(id, name, new string[] { "Off", "On" }, defaultValue ? "On" : "Off", parent, isHeader, type);
+            return new CustomOption(id, name, new string[] { "关", "开" }, defaultValue ? "开" : "关", parent, isHeader, type);
         }
 
         public static void switchPreset(int newPreset) {
@@ -65,7 +65,7 @@ namespace LasMonjas.Core
             foreach (CustomOption option in CustomOption.options) {
                 if (option.id == 0) continue;
 
-                option.entry = LasMonjasPlugin.Instance.Config.Bind($"Preset{preset}", option.id.ToString(), option.defaultSelection);
+                option.entry = LasMonjasPlugin.Instance.Config.Bind($"预设{preset}", option.id.ToString(), option.defaultSelection);
                 option.selection = Mathf.Clamp(option.entry.Value, 0, option.selections.Length - 1);
                 if (option.optionBehaviour != null && option.optionBehaviour is StringOption stringOption) {
                     stringOption.oldValue = stringOption.Value = option.selection;
@@ -578,7 +578,7 @@ namespace LasMonjas.Core
                     break;
             }
 
-            hudString += $"\nTab for next page ({counter + 1}/8)";
+            hudString += $"\n按Tab查看下一页 ({counter + 1}/8)";
             __result = hudString;
         }
     }
