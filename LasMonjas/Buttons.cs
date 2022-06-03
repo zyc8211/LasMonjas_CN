@@ -3181,14 +3181,14 @@ namespace LasMonjas
                     string msg = "";
 
                     int randomNumber = Forensic.target.killerIfExisting.PlayerId == Kid.kid?.PlayerId ? LasMonjas.rnd.Next(3) : LasMonjas.rnd.Next(4);
-                    string typeOfColor = Helpers.isLighterColor(Forensic.target.killerIfExisting.Data.DefaultOutfit.ColorId) ? "lighter (L)" : "darker (D)";
+                    string typeOfColor = Helpers.isLighterColor(Forensic.target.killerIfExisting.Data.DefaultOutfit.ColorId) ? "浅色 (浅)" : "深色 (深)";
                     float timeSinceDeath = ((float)(Forensic.meetingStartTime - Forensic.target.timeOfDeath).TotalMilliseconds);
 
                     string name = "(" + Forensic.target.player.Data.PlayerName + "): ";
-                    if (randomNumber == 0) msg = name + "I was the " + RoleInfo.GetRolesString(Forensic.target.player, false);
-                    else if (randomNumber == 1) msg = name + "My killer has a " + typeOfColor + " color";
-                    else if (randomNumber == 2) msg = name + "I've been dead for " + Math.Round(timeSinceDeath / 1000) + " seconds";
-                    else msg = name + "My killer was the " + RoleInfo.GetRolesString(Forensic.target.killerIfExisting, false); 
+                    if (randomNumber == 0) msg = name + "我是 " + RoleInfo.GetRolesString(Forensic.target.player, false);
+                    else if (randomNumber == 1) msg = name + "杀死我的凶手是 " + typeOfColor + " 色的";
+                    else if (randomNumber == 2) msg = name + "我死于 " + Math.Round(timeSinceDeath / 1000) + " 秒前";
+                    else msg = name + "杀死我的凶手是" + RoleInfo.GetRolesString(Forensic.target.killerIfExisting, false); 
 
                     DestroyableSingleton<HudManager>.Instance.Chat.AddChat(PlayerControl.LocalPlayer, $"{msg}");
 

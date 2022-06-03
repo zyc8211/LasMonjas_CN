@@ -14,7 +14,7 @@ namespace LasMonjas
 {
     public class CustomOptionHolder {
         public static string[] rates = new string[]{"0%", "100%"}; 
-        public static string[] presets = new string[]{"Roles", "Capture the Flag", "Police and Thiefs", "King of the Hill", "Hot Potato", "Zombie Laboratory", "Preset 7", "Preset 8", "Preset 9", "Preset 10" };
+        public static string[] presets = new string[]{"多职业模式", "夺旗赛", "警察抓小偷", "山丘之王", "烫手山芋", "生化危机", "预设 7", "预设 8", "预设 9", "预设 10" };
 
         // Game Options 
         public static CustomOption presetSelection;
@@ -396,55 +396,55 @@ namespace LasMonjas
         public static void Load() {
             
             // Game Options
-            presetSelection = CustomOption.Create(0, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Preset"), "setting", presets, null, true);
+            presetSelection = CustomOption.Create(0, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "预设"), "setting", presets, null, true);
 
             // Global Settings
-            activateSenseiMap = CustomOption.Create(3, cs(Kid.color, "Activate Custom Skeld Map"), "setting", false, null, true);
-            globalSettings = CustomOption.Create(4, cs(Detective.color, "Roles Settings"), "setting", false, null, true);
-            activateRoles = CustomOption.Create(5, cs(Detective.color, "Activate mod roles and block vanilla ones"), "setting", true, globalSettings);
-            removeSwipeCard = CustomOption.Create(6, cs(Detective.color, "Remove Swipe Card Task"), "setting", false, globalSettings);
-            removeAirshipDoors = CustomOption.Create(7, cs(Detective.color, "Remove Airship Doors"), "setting", false, globalSettings);
-            nightVisionLightSabotage = CustomOption.Create(8, cs(Detective.color, "Night vision for lights sabotage"), "setting", false, globalSettings);
-            screenShakeReactorSabotage = CustomOption.Create(9, cs(Detective.color, "Screen shake for reactor sabotage"), "setting", false, globalSettings);
-            anonymousCommsSabotage = CustomOption.Create(10, cs(Detective.color, "Anonymous players for comms sabotage"), "setting", false, globalSettings);
-            slowSpeedOxigenSabotage = CustomOption.Create(11, cs(Detective.color, "Decreaes speed for oxygen sabotage"), "setting", false, globalSettings);
+            activateSenseiMap = CustomOption.Create(3, cs(Kid.color, "激活千年隼号地图"), "setting", false, null, true);
+            globalSettings = CustomOption.Create(4, cs(Detective.color, "职业设置"), "setting", false, null, true);
+            activateRoles = CustomOption.Create(5, cs(Detective.color, "启用模组职业并禁用原版职业"), "setting", true, globalSettings);
+            removeSwipeCard = CustomOption.Create(6, cs(Detective.color, "移除刷卡任务"), "setting", false, globalSettings);
+            removeAirshipDoors = CustomOption.Create(7, cs(Detective.color, "移除飞艇地图的门"), "setting", false, globalSettings);
+            nightVisionLightSabotage = CustomOption.Create(8, cs(Detective.color, "关灯时监控显示隐蔽状态"), "setting", false, globalSettings);
+            screenShakeReactorSabotage = CustomOption.Create(9, cs(Detective.color, "反应堆破坏时震动屏幕"), "setting", false, globalSettings);
+            anonymousCommsSabotage = CustomOption.Create(10, cs(Detective.color, "通讯破坏时进入隐蔽状态"), "setting", false, globalSettings);
+            slowSpeedOxigenSabotage = CustomOption.Create(11, cs(Detective.color, "氧气破坏时降低行动速度"), "setting", false, globalSettings);
 
             // Modifiers
-            activateModifiers = CustomOption.Create(15, cs(Modifiers.color, "Modifiers"), "setting", false, null, true);
-            loverPlayer = CustomOption.Create(16, cs(Modifiers.color, "Lovers"), "setting", rates, activateModifiers, false);
-            lighterPlayer = CustomOption.Create(17, cs(Modifiers.color, "Lighter"), "setting", rates, activateModifiers, false);
-            blindPlayer = CustomOption.Create(18, cs(Modifiers.color, "Blind"), "setting", rates, activateModifiers, false);
-            flashPlayer = CustomOption.Create(19, cs(Modifiers.color, "Flash"), "setting", rates, activateModifiers, false);
-            bigchungusPlayer = CustomOption.Create(20, cs(Modifiers.color, "Big Chungus"), "setting", rates, activateModifiers, false);
-            theChosenOnePlayer = CustomOption.Create(21, cs(Modifiers.color, "The Chosen One"), "setting", rates, activateModifiers, false);
-            theChosenOneReportDelay = CustomOption.Create(22, cs(Modifiers.color, "The Chosen One") + ": Report Delay", "setting", 0f, 0f, 5f, 1f, activateModifiers);
-            performerPlayer = CustomOption.Create(23, cs(Modifiers.color, "Performer"), "setting", rates, activateModifiers, false);
-            performerDuration = CustomOption.Create(24, cs(Modifiers.color, "Performer") + ": Alarm Duration", "setting", 20f, 10f, 30f, 1f, activateModifiers);
-            proPlayer = CustomOption.Create(25, cs(Modifiers.color, "Pro"), "setting", rates, activateModifiers, false);
+            activateModifiers = CustomOption.Create(15, cs(Modifiers.color, "附加职业"), "setting", false, null, true);
+            loverPlayer = CustomOption.Create(16, cs(Modifiers.color, "恋人"), "setting", rates, activateModifiers, false);
+            lighterPlayer = CustomOption.Create(17, cs(Modifiers.color, "执灯人"), "setting", rates, activateModifiers, false);
+            blindPlayer = CustomOption.Create(18, cs(Modifiers.color, "失明者"), "setting", rates, activateModifiers, false);
+            flashPlayer = CustomOption.Create(19, cs(Modifiers.color, "闪电侠"), "setting", rates, activateModifiers, false);
+            bigchungusPlayer = CustomOption.Create(20, cs(Modifiers.color, "巨人"), "setting", rates, activateModifiers, false);
+            theChosenOnePlayer = CustomOption.Create(21, cs(Modifiers.color, "诱饵"), "setting", rates, activateModifiers, false);
+            theChosenOneReportDelay = CustomOption.Create(22, cs(Modifiers.color, "诱饵") + ": 报警延迟", "setting", 0f, 0f, 5f, 1f, activateModifiers);
+            performerPlayer = CustomOption.Create(23, cs(Modifiers.color, "广播员"), "setting", rates, activateModifiers, false);
+            performerDuration = CustomOption.Create(24, cs(Modifiers.color, "广播员") + ": 警报持续时长", "setting", 20f, 10f, 30f, 1f, activateModifiers);
+            proPlayer = CustomOption.Create(25, cs(Modifiers.color, "醉鬼"), "setting", rates, activateModifiers, false);
 
             // Capture the flag mode
-            captureTheFlagMode = CustomOption.Create(30, cs(Sheriff.color, "Capture the Flag"), "gamemode", false, null, true);
-            flagMatchDuration = CustomOption.Create(31, cs(Sheriff.color, "Capture the Flag") + ": Match Duration", "gamemode", 180f, 180f, 300f, 30f, captureTheFlagMode);
-            requiredFlags = CustomOption.Create(32, cs(Sheriff.color, "Capture the Flag") + ": Score Number", "gamemode", 3f, 3f, 5f, 1f, captureTheFlagMode);
-            flagKillCooldown = CustomOption.Create(33, cs(Sheriff.color, "Capture the Flag") + ": Kill Cooldown", "gamemode", 10f, 5f, 15f, 1f, captureTheFlagMode);
-            flagReviveTime = CustomOption.Create(34, cs(Sheriff.color, "Capture the Flag") + ": Revive Wait Time", "gamemode", 8f, 7f, 15f, 1f, captureTheFlagMode);
-            flagInvincibilityTimeAfterRevive = CustomOption.Create(35, cs(Sheriff.color, "Capture the Flag") + ": Invincibility Time After Revive", "gamemode", 3f, 2f, 5f, 1f, captureTheFlagMode);
+            captureTheFlagMode = CustomOption.Create(30, cs(Sheriff.color, "夺旗赛"), "gamemode", false, null, true);
+            flagMatchDuration = CustomOption.Create(31, cs(Sheriff.color, "夺旗赛") + ": 比赛时长", "gamemode", 180f, 180f, 300f, 30f, captureTheFlagMode);
+            requiredFlags = CustomOption.Create(32, cs(Sheriff.color, "夺旗赛") + ": 获胜所需分数", "gamemode", 3f, 3f, 5f, 1f, captureTheFlagMode);
+            flagKillCooldown = CustomOption.Create(33, cs(Sheriff.color, "夺旗赛") + ": 击杀冷却", "gamemode", 10f, 5f, 15f, 1f, captureTheFlagMode);
+            flagReviveTime = CustomOption.Create(34, cs(Sheriff.color, "夺旗赛") + ": 复活等待时间", "gamemode", 8f, 7f, 15f, 1f, captureTheFlagMode);
+            flagInvincibilityTimeAfterRevive = CustomOption.Create(35, cs(Sheriff.color, "夺旗赛") + ": 复活后无敌时长", "gamemode", 3f, 2f, 5f, 1f, captureTheFlagMode);
 
             // Police and Thief mode
-            policeAndThiefMode = CustomOption.Create(40, cs(Coward.color, "Police and Thiefs"), "gamemode", false, null, true);
-            thiefModeMatchDuration = CustomOption.Create(41, cs(Coward.color, "Police and Thiefs") + ": Match Duration", "gamemode", 300f, 300f, 450f, 30f, policeAndThiefMode);
-            thiefModerequiredJewels = CustomOption.Create(42, cs(Coward.color, "Police and Thiefs") + ": Jewel Number", "gamemode", 15f, 8f, 15f, 1f, policeAndThiefMode);
-            thiefModePoliceKillCooldown = CustomOption.Create(43, cs(Coward.color, "Police and Thiefs") + ": Police Kill Cooldown", "gamemode", 15f, 10f, 20f, 1f, policeAndThiefMode);
-            thiefModePoliceCanKillNearPrison = CustomOption.Create(44, cs(Coward.color, "Police and Thiefs") + ": Police can Kill near prison", "gamemode", false, policeAndThiefMode);
-            thiefModePoliceCanSeeJewels = CustomOption.Create(45, cs(Coward.color, "Police and Thiefs") + ": Police can see Jewels", "gamemode", false, policeAndThiefMode);
-            thiefModePoliceCatchCooldown = CustomOption.Create(46, cs(Coward.color, "Police and Thiefs") + ": Arrest Cooldown", "gamemode", 10f, 5f, 15f, 1f, policeAndThiefMode);
-            thiefModecaptureThiefTime = CustomOption.Create(47, cs(Coward.color, "Police and Thiefs") + ": Time to Arrest", "gamemode", 3f, 2f, 5f, 1f, policeAndThiefMode);
-            thiefModepolicevision = CustomOption.Create(48, cs(Coward.color, "Police and Thiefs") + ": Police vision range", "gamemode", 0.8f, 0.4f, 1.4f, 0.2f, policeAndThiefMode);
-            thiefModePoliceReviveTime = CustomOption.Create(49, cs(Coward.color, "Police and Thiefs") + ": Police Revive Wait Time", "gamemode", 8f, 8f, 13f, 1f, policeAndThiefMode);
-            thiefModeCanKill = CustomOption.Create(50, cs(Coward.color, "Police and Thiefs") + ": Thiefs Can Kill", "gamemode", false, policeAndThiefMode);
-            thiefModeKillCooldown = CustomOption.Create(51, cs(Coward.color, "Police and Thiefs") + ": Thiefs Kill Cooldown", "gamemode", 20f, 15f, 30f, 1f, policeAndThiefMode);
-            thiefModeThiefReviveTime = CustomOption.Create(52, cs(Coward.color, "Police and Thiefs") + ": Thiefs Revive Wait Time", "gamemode", 13f, 13f, 23f, 1f, policeAndThiefMode);
-            thiefModeInvincibilityTimeAfterRevive = CustomOption.Create(53, cs(Coward.color, "Police and Thiefs") + ": Invincibility Time After Revive", "gamemode", 3f, 2f, 5f, 1f, policeAndThiefMode);
+            policeAndThiefMode = CustomOption.Create(40, cs(Coward.color, "警察抓小偷"), "gamemode", false, null, true);
+            thiefModeMatchDuration = CustomOption.Create(41, cs(Coward.color, "警察抓小偷") + ": Match Duration", "gamemode", 300f, 300f, 450f, 30f, policeAndThiefMode);
+            thiefModerequiredJewels = CustomOption.Create(42, cs(Coward.color, "警察抓小偷") + ": Jewel Number", "gamemode", 15f, 8f, 15f, 1f, policeAndThiefMode);
+            thiefModePoliceKillCooldown = CustomOption.Create(43, cs(Coward.color, "警察抓小偷") + ": Police Kill Cooldown", "gamemode", 15f, 10f, 20f, 1f, policeAndThiefMode);
+            thiefModePoliceCanKillNearPrison = CustomOption.Create(44, cs(Coward.color, "警察抓小偷") + ": Police can Kill near prison", "gamemode", false, policeAndThiefMode);
+            thiefModePoliceCanSeeJewels = CustomOption.Create(45, cs(Coward.color, "警察抓小偷") + ": Police can see Jewels", "gamemode", false, policeAndThiefMode);
+            thiefModePoliceCatchCooldown = CustomOption.Create(46, cs(Coward.color, "警察抓小偷") + ": Arrest Cooldown", "gamemode", 10f, 5f, 15f, 1f, policeAndThiefMode);
+            thiefModecaptureThiefTime = CustomOption.Create(47, cs(Coward.color, "警察抓小偷") + ": Time to Arrest", "gamemode", 3f, 2f, 5f, 1f, policeAndThiefMode);
+            thiefModepolicevision = CustomOption.Create(48, cs(Coward.color, "警察抓小偷") + ": Police vision range", "gamemode", 0.8f, 0.4f, 1.4f, 0.2f, policeAndThiefMode);
+            thiefModePoliceReviveTime = CustomOption.Create(49, cs(Coward.color, "警察抓小偷") + ": Police Revive Wait Time", "gamemode", 8f, 8f, 13f, 1f, policeAndThiefMode);
+            thiefModeCanKill = CustomOption.Create(50, cs(Coward.color, "警察抓小偷") + ": Thiefs Can Kill", "gamemode", false, policeAndThiefMode);
+            thiefModeKillCooldown = CustomOption.Create(51, cs(Coward.color, "警察抓小偷") + ": Thiefs Kill Cooldown", "gamemode", 20f, 15f, 30f, 1f, policeAndThiefMode);
+            thiefModeThiefReviveTime = CustomOption.Create(52, cs(Coward.color, "警察抓小偷") + ": Thiefs Revive Wait Time", "gamemode", 13f, 13f, 23f, 1f, policeAndThiefMode);
+            thiefModeInvincibilityTimeAfterRevive = CustomOption.Create(53, cs(Coward.color, "警察抓小偷") + ": Invincibility Time After Revive", "gamemode", 3f, 2f, 5f, 1f, policeAndThiefMode);
 
             // King of the hill mode
             kingOfTheHillMode = CustomOption.Create(60, cs(Squire.color, "King of the Hill"), "gamemode", false, null, true);
