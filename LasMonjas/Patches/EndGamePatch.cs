@@ -454,7 +454,7 @@ namespace LasMonjas.Patches {
             textRenderer.text = "";
 
             if (AdditionalTempData.winCondition == WinCondition.JokerWin) {
-                textRenderer.text = "Joker Wins";
+                textRenderer.text = "小丑胜利";
                 textRenderer.color = Joker.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(3);
@@ -462,7 +462,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(3);
             }
             else if (AdditionalTempData.winCondition == WinCondition.PyromaniacWin) {
-                textRenderer.text = "Pyromaniac Wins";
+                textRenderer.text = "纵火犯胜利";
                 textRenderer.color = Pyromaniac.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(3);
@@ -470,7 +470,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(3);
             }
             else if (AdditionalTempData.winCondition == WinCondition.LoversTeamWin) {
-                textRenderer.text = "Lovers and Crewmates Win";
+                textRenderer.text = "恋人及船员胜利";
                 textRenderer.color = Modifiers.loverscolor;
                 __instance.BackgroundBar.material.SetColor("_Color", Modifiers.loverscolor);
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
@@ -479,7 +479,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(5);
             }
             else if (AdditionalTempData.winCondition == WinCondition.LoversSoloWin) {
-                textRenderer.text = "Lover Team Win";
+                textRenderer.text = "恋人胜利";
                 textRenderer.color = Modifiers.loverscolor;
                 __instance.BackgroundBar.material.SetColor("_Color", Modifiers.loverscolor);
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
@@ -488,7 +488,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(6);
             }
             else if (AdditionalTempData.winCondition == WinCondition.RenegadeWin) {
-                textRenderer.text = "Renegade Team Win";
+                textRenderer.text = "变节者队胜利";
                 textRenderer.color = Renegade.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(4);
@@ -496,7 +496,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(4);
             }
             else if (AdditionalTempData.winCondition == WinCondition.KidLose) {
-                textRenderer.text = "Kid Win";
+                textRenderer.text = "小孩胜利";
                 textRenderer.color = Kid.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(6);
@@ -504,7 +504,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(6);
             }
             else if (AdditionalTempData.winCondition == WinCondition.BombExploded) {
-                textRenderer.text = "Bomb Exploded";
+                textRenderer.text = "炸弹爆炸";
                 textRenderer.color = Bomberman.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(6);
@@ -512,7 +512,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(6);
             }
             else if (AdditionalTempData.winCondition == WinCondition.BountyHunterWin) {
-                textRenderer.text = "Bounty Hunter Wins";
+                textRenderer.text = "赏金猎人胜利";
                 textRenderer.color = BountyHunter.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(4);
@@ -520,7 +520,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(4);
             }
             else if (AdditionalTempData.winCondition == WinCondition.TreasureHunterWin) {
-                textRenderer.text = "Treasure Hunter Wins";
+                textRenderer.text = "寻宝猎人胜利";
                 textRenderer.color = TreasureHunter.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(3);
@@ -528,7 +528,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(3);
             }
             else if (AdditionalTempData.winCondition == WinCondition.DevourerWin) {
-                textRenderer.text = "Devourer Wins";
+                textRenderer.text = "秃鹫胜利";
                 textRenderer.color = Devourer.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(3);
@@ -536,7 +536,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(3);
             }
             else if (AdditionalTempData.winCondition == WinCondition.PuppeteerWin) {
-                textRenderer.text = "Puppeteer Wins";
+                textRenderer.text = "傀儡师胜利";
                 textRenderer.color = Puppeteer.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(3);
@@ -544,7 +544,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(3);
             }
             else if (AdditionalTempData.winCondition == WinCondition.PoisonerWin) {
-                textRenderer.text = "Poisoner Wins";
+                textRenderer.text = "疫医胜利";
                 textRenderer.color = Poisoner.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(3);
@@ -552,7 +552,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(3);
             }
             else if (AdditionalTempData.winCondition == WinCondition.TrapperWin) {
-                textRenderer.text = "Trapper Wins";
+                textRenderer.text = "陷阱师胜利";
                 textRenderer.color = Trapper.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(4);
@@ -560,7 +560,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(4);
             }
             else if (AdditionalTempData.winCondition == WinCondition.YinyangerWin) {
-                textRenderer.text = "Yinyanger Wins";
+                textRenderer.text = "阴阳师胜利";
                 textRenderer.color = Yinyanger.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(4);
@@ -568,7 +568,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(4);
             }
             else if (AdditionalTempData.winCondition == WinCondition.ChallengerWin) {
-                textRenderer.text = "Challenger Wins";
+                textRenderer.text = "挑战者胜利";
                 textRenderer.color = Challenger.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(4);
@@ -576,7 +576,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(4);
             }
             else if (AdditionalTempData.winCondition == WinCondition.NinjaWin) {
-                textRenderer.text = "Ninja Wins";
+                textRenderer.text = "忍者胜利";
                 textRenderer.color = Ninja.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(4);
@@ -584,7 +584,7 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(4);
             }
             else if (AdditionalTempData.winCondition == WinCondition.BerserkerWin) {
-                textRenderer.text = "Berserker Wins";
+                textRenderer.text = "嗜血杀手胜利";
                 textRenderer.color = Berserker.color;
                 MessageWriter writermusic = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ChangeMusic, Hazel.SendOption.Reliable, -1);
                 writermusic.Write(4);
@@ -592,43 +592,43 @@ namespace LasMonjas.Patches {
                 RPCProcedure.changeMusic(4);
             }
             else if (AdditionalTempData.winCondition == WinCondition.DrawTeamWin || AdditionalTempData.winCondition == WinCondition.TeamHillDraw) {
-                textRenderer.text = "Draw";
+                textRenderer.text = "无人生还";
                 textRenderer.color = new Color32(255, 128, 0, byte.MaxValue); 
             }
             else if (AdditionalTempData.winCondition == WinCondition.RedTeamFlagWin) {
-                textRenderer.text = "Red Team Win";
+                textRenderer.text = "红队获胜";
                 textRenderer.color = Color.red; 
             }
             else if (AdditionalTempData.winCondition == WinCondition.BlueTeamFlagWin) {
-                textRenderer.text = "Blue Team Win";
+                textRenderer.text = "蓝队获胜";
                 textRenderer.color = Color.blue; 
             }
             else if (AdditionalTempData.winCondition == WinCondition.ThiefModePoliceWin) {
-                textRenderer.text = "Police Team Win";
+                textRenderer.text = "警察获胜";
                 textRenderer.color = Color.cyan; 
             }
             else if (AdditionalTempData.winCondition == WinCondition.ThiefModeThiefWin) {
-                textRenderer.text = "Thief Team Win";
+                textRenderer.text = "小偷获胜";
                 textRenderer.color = Mechanic.color;
             }
             else if (AdditionalTempData.winCondition == WinCondition.GreenTeamHillWin) {
-                textRenderer.text = "Green Team Win";
+                textRenderer.text = "绿队获胜";
                 textRenderer.color = Color.green;
             }
             else if (AdditionalTempData.winCondition == WinCondition.YellowTeamHillWin) {
-                textRenderer.text = "Yellow Team Win";
+                textRenderer.text = "黄队获胜";
                 textRenderer.color = Color.yellow;
             }
             else if (AdditionalTempData.winCondition == WinCondition.HotPotatoEnd) {
-                textRenderer.text = "Cold Potato Team Win";
+                textRenderer.text = "冷山芋队获胜";
                 textRenderer.color = Color.cyan;
             }
             else if (AdditionalTempData.winCondition == WinCondition.ZombieWin) {
-                textRenderer.text = "Zombie Team Win";
+                textRenderer.text = "僵尸队获胜";
                 textRenderer.color = Mechanic.color;
             }
             else if (AdditionalTempData.winCondition == WinCondition.SurvivorWin) {
-                textRenderer.text = "Survivor Team Win";
+                textRenderer.text = "幸存者队获胜";
                 textRenderer.color = Shy.color;
             }
             else {
@@ -645,7 +645,7 @@ namespace LasMonjas.Patches {
                 roleSummary.transform.localScale = new Vector3(1f, 1f, 1f);
 
                 var roleSummaryText = new StringBuilder();
-                roleSummaryText.AppendLine("Game Summary (Players / Roles / Tasks):");
+                roleSummaryText.AppendLine("游戏总结 (玩家 / 角色 / 任务):");
                 foreach (var data in AdditionalTempData.playerRoles) {
                     var roles = string.Join(" ", data.Roles.Select(x => Helpers.cs(x.color, x.name)));
                     var taskInfo = data.TasksTotal > 0 ? $" - <color=#FAD934FF>({data.TasksCompleted}/{data.TasksTotal})</color>" : "";

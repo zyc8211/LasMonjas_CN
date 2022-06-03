@@ -261,42 +261,42 @@ namespace LasMonjas.Patches
             // Deactivate emergency button for custom gamemodes
             if (howmanygamemodesareon == 1) {
                 roleCanCallEmergency = false;
-                statusText = "Can't use the emergency button \non custom gamemodes!";
+                statusText = "无法使用紧急按钮\n小游戏模式";
             }
             // Deactivate emergency button for Cheater
             if (Cheater.cheater != null && Cheater.cheater == PlayerControl.LocalPlayer && !Cheater.canCallEmergency) {
                 roleCanCallEmergency = false;
-                statusText = "The Cheater can't use the emergency button!";
+                statusText = "换票师无法使用紧急按钮!";
             }
 
             // Deactivate emergency button for Gambler
             if (Gambler.gambler != null && Gambler.gambler == PlayerControl.LocalPlayer && !Gambler.canCallEmergency) {
                 roleCanCallEmergency = false;
-                statusText = "The Gambler can't use the emergency button!";
+                statusText = "赌怪不能使用紧急按钮!";
             }
 
             // Deactivate emergency button for Sorcerer
             if (Sorcerer.sorcerer != null && Sorcerer.sorcerer == PlayerControl.LocalPlayer && !Sorcerer.canCallEmergency) {
                 roleCanCallEmergency = false;
-                statusText = "The Sorcerer can't use the emergency button!";
+                statusText = "女巫不能使用紧急按钮!";
             }
 
             // Deactivate emergency button for TreasureHunter
             if (TreasureHunter.treasureHunter != null && TreasureHunter.treasureHunter == PlayerControl.LocalPlayer && !TreasureHunter.canCallEmergency) {
                 roleCanCallEmergency = false;
-                statusText = "The Treasure Hunter can't use the emergency button!";
+                statusText = "寻宝猎人不能使用紧急按钮!";
             }
 
             // Deactivate emergency button if there's a bomb
             if (Bomberman.bomberman != null && Bomberman.activeBomb == true) {
                 roleCanCallEmergency = false;
-                statusText = "There's a Bomb, you can't use the emergency button!";
+                statusText = "有炸弹，不能用紧急按钮!";
             }
 
             // Deactivate emergency button if there's lights out
             if (Illusionist.illusionist != null && Illusionist.lightsOutTimer > 0) {
                 roleCanCallEmergency = false;
-                statusText = "There's a Blackout, emergency button doesn't work!";
+                statusText = "停电了，紧急按钮无法使用了!";
             }
 
             if (!roleCanCallEmergency) {
@@ -468,7 +468,7 @@ namespace LasMonjas.Patches
                             counterArea.UpdateCount(num2);
                         }
                         else {
-                            Debug.LogWarning("Couldn't find counter for:" + counterArea.RoomType);
+                            Debug.LogWarning("找不到计数器:" + counterArea.RoomType);
                         }
                     }
                     else {

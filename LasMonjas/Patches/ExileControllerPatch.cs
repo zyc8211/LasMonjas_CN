@@ -377,15 +377,15 @@ namespace LasMonjas.Patches {
                     if (player == null) return;
                     // Exile role text
                     if (id == StringNames.ExileTextPN || id == StringNames.ExileTextSN || id == StringNames.ExileTextPP || id == StringNames.ExileTextSP) {
-                        __result = player.Data.PlayerName + " was the " + String.Join(" ", RoleInfo.getRoleInfoForPlayer(player).Select(x => x.name).ToArray());
+                        __result = player.Data.PlayerName + " 是 " + String.Join(" ", RoleInfo.getRoleInfoForPlayer(player).Select(x => x.name).ToArray());
                     }
                     // Custom text on Joker exile instead remaining impostors
                     if (id == StringNames.ImpostorsRemainP || id == StringNames.ImpostorsRemainS) {
-                        if (Joker.joker != null && player.PlayerId == Joker.joker.PlayerId) __result = "You thought I was the Impostor but it was me, Joker!";
+                        if (Joker.joker != null && player.PlayerId == Joker.joker.PlayerId) __result = "谢谢你,其实我是小丑!";
                     }
                     // Custom text on Kid exile instead remaining impostors
                     if (id == StringNames.ImpostorsRemainP || id == StringNames.ImpostorsRemainS) {
-                        if (Kid.kid != null && player.PlayerId == Kid.kid.PlayerId) __result = "That's all folks!";
+                        if (Kid.kid != null && player.PlayerId == Kid.kid.PlayerId) __result = "警察叔叔，就是那个人!";
                     }
                 }
             }

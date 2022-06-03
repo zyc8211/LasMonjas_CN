@@ -183,27 +183,27 @@ namespace LasMonjas.Patches
                 __instance.ImpostorText.text = "";
                 if (CaptureTheFlag.captureTheFlagMode) {
                     __instance.BackgroundBar.material.color = Sheriff.color;
-                    __instance.TeamTitle.text = "Capture \nThe Flag";
+                    __instance.TeamTitle.text = "夺旗赛";
                     __instance.TeamTitle.color = Sheriff.color;
                 }
                 else if (PoliceAndThief.policeAndThiefMode) {
                     __instance.BackgroundBar.material.color = Coward.color;
-                    __instance.TeamTitle.text = "Police \nAnd Thiefs";
+                    __instance.TeamTitle.text = "警察 \n抓小偷";
                     __instance.TeamTitle.color = Coward.color;
                 }
                 else if (KingOfTheHill.kingOfTheHillMode) {
                     __instance.BackgroundBar.material.color = Squire.color;
-                    __instance.TeamTitle.text = "King Of \nThe Hill";
+                    __instance.TeamTitle.text = "山丘之王";
                     __instance.TeamTitle.color = Squire.color;
                 }
                 else if (HotPotato.hotPotatoMode) {
                     __instance.BackgroundBar.material.color = Shy.color;
-                    __instance.TeamTitle.text = "Hot Potato";
+                    __instance.TeamTitle.text = "烫手山芋";
                     __instance.TeamTitle.color = Shy.color;
                 }
                 else if (ZombieLaboratory.zombieLaboratoryMode) {
                     __instance.BackgroundBar.material.color = Hunter.color;
-                    __instance.TeamTitle.text = "Zombie \nLaboratory";
+                    __instance.TeamTitle.text = "生化危机";
                     __instance.TeamTitle.color = Hunter.color;
                 }
             }
@@ -211,13 +211,13 @@ namespace LasMonjas.Patches
                 if (roleInfo.isNeutral) {
                     var neutralColor = new Color32(76, 84, 78, 255);
                     __instance.BackgroundBar.material.color = neutralColor;
-                    __instance.TeamTitle.text = "Neutral";
+                    __instance.TeamTitle.text = "独立阵营";
                     __instance.TeamTitle.color = neutralColor;
                 }
                 else if (roleInfo.isRebel) {
                     var rebelColor = new Color32(79, 125, 0, 255);
                     __instance.BackgroundBar.material.color = rebelColor;
-                    __instance.TeamTitle.text = "Rebel";
+                    __instance.TeamTitle.text = "叛变者阵营";
                     __instance.TeamTitle.color = rebelColor;
                 }
             }
@@ -245,9 +245,9 @@ namespace LasMonjas.Patches
 
                     if (infos.Any(info => info.roleId == RoleId.Lover)) {
                         PlayerControl otherLover = PlayerControl.LocalPlayer == Modifiers.lover1 ? Modifiers.lover2 : Modifiers.lover1;
-                        __instance.RoleBlurbText.text = PlayerControl.LocalPlayer.Data.Role.IsImpostor ? "<color=#FF00D1FF>Lover</color><color=#FF0000FF>stor</color>" : "<color=#FF00D1FF>Lover</color>";
+                        __instance.RoleBlurbText.text = PlayerControl.LocalPlayer.Data.Role.IsImpostor ? "<color=#FF0000FF>伪装者</color><color=#FF00D1FF>恋人</color>" : "<color=#FF00D1FF>恋人</color>";
                         __instance.RoleBlurbText.color = PlayerControl.LocalPlayer.Data.Role.IsImpostor ? Color.white : Modifiers.loverscolor;
-                        __instance.ImpostorText.text = Helpers.cs(Modifiers.loverscolor, $"♥ Survive as a couple with {otherLover?.Data?.PlayerName ?? ""} ♥");
+                        __instance.ImpostorText.text = Helpers.cs(Modifiers.loverscolor, $"♥ 与你的恋人一起存活 {otherLover?.Data?.PlayerName ?? ""} ♥");
                         __instance.ImpostorText.gameObject.SetActive(true);
                         __instance.BackgroundBar.material.color = Modifiers.loverscolor;
                     }
@@ -788,7 +788,7 @@ namespace LasMonjas.Patches
                                 }
                                 break;
                         }
-                        new CustomMessage("Time Left: ", CaptureTheFlag.matchDuration, -1, -1.3f, 3);
+                        new CustomMessage("比赛时间: ", CaptureTheFlag.matchDuration, -1, -1.3f, 3);
                         new CustomMessage(CaptureTheFlag.flagpointCounter, CaptureTheFlag.matchDuration, -1, 1.9f, 5);
 
                         // Add Arrows pointing the flags
@@ -1824,8 +1824,8 @@ namespace LasMonjas.Patches
                                 }
                             }
                         }
-                        new CustomMessage("Time Left: ", PoliceAndThief.matchDuration, -1, -1.3f, 6);
-                        PoliceAndThief.thiefpointCounter = "Stolen Jewels: " + "<color=#00F7FFFF>" + PoliceAndThief.currentJewelsStoled + "/" + PoliceAndThief.requiredJewels + "</color> | " + "Captured Thiefs: " + "<color=#928B55FF>" + PoliceAndThief.currentThiefsCaptured + "/" + PoliceAndThief.thiefTeam.Count + "</color>";
+                        new CustomMessage("比赛时间: ", PoliceAndThief.matchDuration, -1, -1.3f, 6);
+                        PoliceAndThief.thiefpointCounter = "被盗宝石: " + "<color=#00F7FFFF>" + PoliceAndThief.currentJewelsStoled + "/" + PoliceAndThief.requiredJewels + "</color> | " + "被捕小偷: " + "<color=#928B55FF>" + PoliceAndThief.currentThiefsCaptured + "/" + PoliceAndThief.thiefTeam.Count + "</color>";
                         new CustomMessage(PoliceAndThief.thiefpointCounter, PoliceAndThief.matchDuration, -1, 1.9f, 8);
                     }
                     // King of the hill
@@ -2398,7 +2398,7 @@ namespace LasMonjas.Patches
                                 }
                                 break;
                         }
-                        new CustomMessage("Time Left: ", KingOfTheHill.matchDuration, -1, -1.3f, 10);
+                        new CustomMessage("比赛时间: ", KingOfTheHill.matchDuration, -1, -1.3f, 10);
                         new CustomMessage(KingOfTheHill.kingpointCounter, KingOfTheHill.matchDuration, -1, 1.9f, 12);
 
                         // Add Arrows pointing the zones
@@ -3400,8 +3400,8 @@ namespace LasMonjas.Patches
 
                         createdzombielaboratory = true;
 
-                        new CustomMessage("Time Left: ", ZombieLaboratory.matchDuration, -1, -1.3f, 19);
-                        ZombieLaboratory.zombieLaboratoryCounter = "Key Items: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "Survivors: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "Infected: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "Zombies: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
+                        new CustomMessage("剩余时间: ", ZombieLaboratory.matchDuration, -1, -1.3f, 19);
+                        ZombieLaboratory.zombieLaboratoryCounter = "关键物品: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "幸存者: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "感染者: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "僵尸: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
                         new CustomMessage(ZombieLaboratory.zombieLaboratoryCounter, ZombieLaboratory.matchDuration, -1, 1.9f, 20);
                     }
                 }

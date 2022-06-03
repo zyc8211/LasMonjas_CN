@@ -134,7 +134,7 @@ namespace LasMonjas.Patches {
                         MeetingHud.VoterState voterState = states[j];
                         GameData.PlayerInfo playerById = GameData.Instance.GetPlayerById(voterState.VoterId);
                         if (playerById == null) {
-                            Debug.LogError(string.Format("Couldn't find player info for voter: {0}", voterState.VoterId));
+                            Debug.LogError(string.Format("找不到投票人信息: {0}", voterState.VoterId));
                         } else if (i == 0 && voterState.SkippedVote && !playerById.IsDead) {
                             __instance.BloopAVoteIcon(playerById, num, __instance.SkippedVoting.transform);
                             num++;

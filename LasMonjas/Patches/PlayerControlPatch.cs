@@ -1832,63 +1832,63 @@ namespace LasMonjas.Patches {
 
                     if (isForensicReport) {
                         if (deadPlayer.player == RoleThief.rolethief && deadPlayer.killerIfExisting.Data.PlayerName == RoleThief.rolethief.Data.PlayerName) {
-                            msg = $"Body Report (Role Thief): It appears to be a suicide! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                            msg = $"尸检报告 (身份窃贼): 似乎是自杀! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                         }
                         else if (deadPlayer.player == BountyHunter.bountyhunter && deadPlayer.killerIfExisting.Data.PlayerName == BountyHunter.bountyhunter.Data.PlayerName) {
-                            msg = $"Body Report (Bounty Hunter): It appears to be a suicide! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                            msg = $"尸检报告 (赏金猎人): 似乎是自杀! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                         }
                         else if (deadPlayer.player == Modifiers.lover1 && deadPlayer.killerIfExisting.Data.PlayerName == Modifiers.lover1.Data.PlayerName || deadPlayer.player == Modifiers.lover2 && deadPlayer.killerIfExisting.Data.PlayerName == Modifiers.lover2.Data.PlayerName) {
-                            msg = $"Body Report (Lover): It appears to be a suicide! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                            msg = $"尸检报告 (恋人): 似乎是自杀! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                         }
                         else if (deadPlayer.player == Sheriff.sheriff && deadPlayer.killerIfExisting.Data.PlayerName == Sheriff.sheriff.Data.PlayerName) {
-                            msg = $"Body Report (Sheriff): It appears to be a suicide! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                            msg = $"尸检报告 (警长): 似乎是自杀! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                         }
                         else if (timeSinceDeath < Forensic.reportNameDuration * 1000) {
-                            msg = $"Body Report: The killer appears to be {deadPlayer.killerIfExisting.Data.PlayerName}! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                            msg = $"尸检报告: 凶手似乎是 {deadPlayer.killerIfExisting.Data.PlayerName}! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                         }
                         else if (timeSinceDeath < Forensic.reportColorDuration * 1000) {
-                            var typeOfColor = Helpers.isLighterColor(deadPlayer.killerIfExisting.Data.DefaultOutfit.ColorId) ? "lighter (L)" : "darker (D)";
-                            msg = $"Body Report: The killer appears to have a {typeOfColor} color! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                            var typeOfColor = Helpers.isLighterColor(deadPlayer.killerIfExisting.Data.DefaultOutfit.ColorId) ? "深色 (深)" : "浅色 (浅)";
+                            msg = $"尸检报告: 凶手似乎是 {typeOfColor} 色! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                         }
                         else if (timeSinceDeath < Forensic.reportClueDuration * 1000) {
                             int randomClue = rnd.Next(1, 5);
                             switch (randomClue) {
                                 case 1:
                                     if (deadPlayer.killerIfExisting.Data.DefaultOutfit.HatId != null) {
-                                        msg = $"Body Report: The killer appears to wear a hat! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                                        msg = $"尸检报告: 凶手似乎戴着帽子! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                                     }
                                     else {
-                                        msg = $"Body Report: The killer doesn't wear a hat! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                                        msg = $"尸检报告: 凶手似乎没戴帽子! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                                     }
                                     break;
                                 case 2:
                                     if (deadPlayer.killerIfExisting.Data.DefaultOutfit.SkinId != null) {
-                                        msg = $"Body Report: The killer appears to wear an outfit! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                                        msg = $"尸检报告: 凶手似乎穿着衣服! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                                     }
                                     else {
-                                        msg = $"Body Report: The killer doesn't wear an outfit! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                                        msg = $"尸检报告: 凶手似乎没穿衣服! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                                     }
                                     break;
                                 case 3:
                                     if (deadPlayer.killerIfExisting.Data.DefaultOutfit.PetId != null) {
-                                        msg = $"Body Report: The killer appears to have a pet! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                                        msg = $"尸检报告: 凶手似乎带着宠物! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                                     }
                                     else {
-                                        msg = $"Body Report: The killer hasn't got a pet! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                                        msg = $"尸检报告: 凶手似乎没带宠物! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                                     }
                                     break;
                                 case 4:
                                     if (deadPlayer.killerIfExisting.Data.DefaultOutfit.VisorId != null) {
-                                        msg = $"Body Report: The killer appears to wear a visor! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                                        msg = $"尸检报告: 凶手似乎带着面罩! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                                     }
                                     else {
-                                        msg = $"Body Report: The killer doesn't wear a visor! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                                        msg = $"尸检报告: 凶手似乎没带面罩! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                                     }
                                     break;
                             }
                         }
                         else {
-                            msg = $"Body Report: The body is too old to gain information from! ({Math.Round(timeSinceDeath / 1000)} seconds ago)";
+                            msg = $"尸检报告: 尸体死亡时间过长已经无法获取信息! ({Math.Round(timeSinceDeath / 1000)} 秒前)";
                         }
                     }
 
@@ -1896,7 +1896,7 @@ namespace LasMonjas.Patches {
                         if (AmongUsClient.Instance.AmClient && DestroyableSingleton<HudManager>.Instance) {
                             DestroyableSingleton<HudManager>.Instance.Chat.AddChat(PlayerControl.LocalPlayer, msg);
                         }
-                        if (msg.IndexOf("who", StringComparison.OrdinalIgnoreCase) >= 0) {
+                        if (msg.IndexOf("谁", StringComparison.OrdinalIgnoreCase) >= 0) {
                             DestroyableSingleton<Assets.CoreScripts.Telemetry>.Instance.SendWho();
                         }
                     }
@@ -3424,8 +3424,8 @@ namespace LasMonjas.Patches {
                                     }
                                 })));
 
-                                new CustomMessage("<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> is the new Hot Potato!", 5, -1, 1f, 16);
-                                HotPotato.hotpotatopointCounter = "Hot Potato: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "Cold Potatoes: " + "<color=#00F7FFFF>" + notPotatosAlives + "</color>";
+                                new CustomMessage("<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> 是新的烫手山芋!", 5, -1, 1f, 16);
+                                HotPotato.hotpotatopointCounter = "烫手山芋: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "冷山芋: " + "<color=#00F7FFFF>" + notPotatosAlives + "</color>";
                             }
                         })));
                     }
@@ -3936,7 +3936,7 @@ namespace LasMonjas.Patches {
 
                         }
                     }
-                    ZombieLaboratory.zombieLaboratoryCounter = "Key Items: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "Survivors: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "Infected: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "Zombies: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
+                    ZombieLaboratory.zombieLaboratoryCounter = "关键物品: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "幸存者: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "感染者: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "僵尸: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
                 }
             } else {
                 // Check alive players for disable sabotage button if game result in 1vs1 special condition (impostor + rebel / impostor + captain / rebel + captain)

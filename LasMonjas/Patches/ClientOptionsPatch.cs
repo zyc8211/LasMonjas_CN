@@ -14,11 +14,11 @@ namespace LasMonjas.Patches
     public static class ClientOptionsPatch
     {
         private static SelectionBehaviour[] AllOptions = {
-            new SelectionBehaviour("Hide Room Code", () => LasMonjasPlugin.StreamerMode.Value = !LasMonjasPlugin.StreamerMode.Value, LasMonjasPlugin.StreamerMode.Value),
-            new SelectionBehaviour("Game Summary", () => MapOptions.showRoleSummary = LasMonjasPlugin.ShowRoleSummary.Value = !LasMonjasPlugin.ShowRoleSummary.Value, LasMonjasPlugin.ShowRoleSummary.Value),
-            new SelectionBehaviour("Activate Music", () => MapOptions.activateMusic = LasMonjasPlugin.ActivateMusic.Value = !LasMonjasPlugin.ActivateMusic.Value, LasMonjasPlugin.ActivateMusic.Value),
-            new SelectionBehaviour("Ghosts Can \nSee Roles", () => MapOptions.ghostsSeeRoles = LasMonjasPlugin.GhostsSeeRoles.Value = !LasMonjasPlugin.GhostsSeeRoles.Value, LasMonjasPlugin.GhostsSeeRoles.Value),
-            new SelectionBehaviour("Horse Mode", () => MapOptions.horseMode = LasMonjasPlugin.HorseMode.Value = !LasMonjasPlugin.HorseMode.Value, LasMonjasPlugin.HorseMode.Value),
+            new SelectionBehaviour("隐藏房间代码", () => LasMonjasPlugin.StreamerMode.Value = !LasMonjasPlugin.StreamerMode.Value, LasMonjasPlugin.StreamerMode.Value),
+            new SelectionBehaviour("比赛总结", () => MapOptions.showRoleSummary = LasMonjasPlugin.ShowRoleSummary.Value = !LasMonjasPlugin.ShowRoleSummary.Value, LasMonjasPlugin.ShowRoleSummary.Value),
+            new SelectionBehaviour("激活音乐", () => MapOptions.activateMusic = LasMonjasPlugin.ActivateMusic.Value = !LasMonjasPlugin.ActivateMusic.Value, LasMonjasPlugin.ActivateMusic.Value),
+            new SelectionBehaviour("死亡可\n显示职业", () => MapOptions.ghostsSeeRoles = LasMonjasPlugin.GhostsSeeRoles.Value = !LasMonjasPlugin.GhostsSeeRoles.Value, LasMonjasPlugin.GhostsSeeRoles.Value),
+            new SelectionBehaviour("马模式", () => MapOptions.horseMode = LasMonjasPlugin.HorseMode.Value = !LasMonjasPlugin.HorseMode.Value, LasMonjasPlugin.HorseMode.Value),
         };
         
         private static GameObject popUp;
@@ -100,7 +100,7 @@ namespace LasMonjas.Patches
             moreOptions.transform.localScale = new Vector3(0.66f, 1, 1); 
             
             moreOptions.gameObject.SetActive(true);
-            moreOptions.Text.text = "Las Monjas Options";
+            moreOptions.Text.text = "模组设置";
             moreOptions.Text.transform.localScale = new Vector3(1 / 0.66f, 1, 1);
             var moreOptionsButton = moreOptions.GetComponent<PassiveButton>();
             moreOptionsButton.OnClick = new ButtonClickedEvent();
@@ -164,7 +164,7 @@ namespace LasMonjas.Patches
                 button.Text.font = Object.Instantiate(titleText.font);
                 button.Text.GetComponent<RectTransform>().sizeDelta = new Vector2(2, 2);
 
-                button.name = info.Title.Replace(" ", "") + "Toggle";
+                button.name = info.Title.Replace(" ", "") + "切换";
                 button.gameObject.SetActive(true);
                 
                 var passiveButton = button.GetComponent<PassiveButton>();

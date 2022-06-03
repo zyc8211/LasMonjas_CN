@@ -290,7 +290,7 @@ namespace LasMonjas.Patches {
                 if (MeetingHud.Instance != null) {
                     foreach (PlayerVoteArea player in MeetingHud.Instance.playerStates) {
                         var target = Helpers.playerById(player.TargetPlayerId);
-                        if (target != null) player.NameText.text += $" ({(Helpers.isLighterColor(target.Data.DefaultOutfit.ColorId) ? "L" : "D")})";
+                        if (target != null) player.NameText.text += $" ({(Helpers.isLighterColor(target.Data.DefaultOutfit.ColorId) ? "浅" : "深")})";
                     }
                 }
             }
@@ -492,7 +492,7 @@ namespace LasMonjas.Patches {
                         }
                     }
 
-                    KingOfTheHill.kingpointCounter = "Score: " + "<color=#00FF00FF>" + KingOfTheHill.currentGreenTeamPoints.ToString("F0") + "</color> - " + "<color=#FFFF00FF>" + KingOfTheHill.currentYellowTeamPoints.ToString("F0") + "</color>";
+                    KingOfTheHill.kingpointCounter = "比分: " + "<color=#00FF00FF>" + KingOfTheHill.currentGreenTeamPoints.ToString("F0") + "</color> - " + "<color=#FFFF00FF>" + KingOfTheHill.currentYellowTeamPoints.ToString("F0") + "</color>";
 
                 }
 
@@ -1250,7 +1250,7 @@ namespace LasMonjas.Patches {
                 }
                 KingOfTheHill.greenkingaura.transform.parent = KingOfTheHill.greenKingplayer.transform;
                 if (PlayerControl.LocalPlayer == KingOfTheHill.greenKingplayer) {
-                    new CustomMessage("You're the new <color=#00FF00FF>Green King</color>!", 5, -1, 1.6f, 11);
+                    new CustomMessage("你是新的 <color=#00FF00FF>绿队国王</color>!", 5, -1, 1.6f, 11);
                 }
                 KingOfTheHill.greenKingIsReviving = false;
 
@@ -1291,7 +1291,7 @@ namespace LasMonjas.Patches {
                 }
                 KingOfTheHill.yellowkingaura.transform.parent = KingOfTheHill.yellowKingplayer.transform;
                 if (PlayerControl.LocalPlayer == KingOfTheHill.yellowKingplayer) {
-                    new CustomMessage("You're the new <color=#FFFF00FF>Yellow King</color>!", 5, -1, 1.6f, 11);
+                    new CustomMessage("你是新的 <color=#FFFF00FF>黄队国王</color>!", 5, -1, 1.6f, 11);
                 }
                 KingOfTheHill.yellowKingIsReviving = false;
 
@@ -1341,9 +1341,9 @@ namespace LasMonjas.Patches {
 
                 if (!HotPotato.firstPotatoTransfered) {
                     HotPotato.firstPotatoTransfered = true;
-                    new CustomMessage("Hot Potato: ", HotPotato.matchDuration, -1, -1f, 18);
-                    new CustomMessage("Time Left: ", HotPotato.matchDuration, -1, -1.3f, 15);
-                    HotPotato.hotpotatopointCounter = "Hot Potato: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "Cold Potatoes: " + "<color=#00F7FFFF>" + HotPotato.notPotatoTeam.Count + "</color>";
+                    new CustomMessage("烫手山芋: ", HotPotato.matchDuration, -1, -1f, 18);
+                    new CustomMessage("剩余时间: ", HotPotato.matchDuration, -1, -1.3f, 15);
+                    HotPotato.hotpotatopointCounter = "烫手山芋: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "冷山芋: " + "<color=#00F7FFFF>" + HotPotato.notPotatoTeam.Count + "</color>";
                     new CustomMessage(HotPotato.hotpotatopointCounter, HotPotato.matchDuration, -1, 1.9f, 17);
                 }
 
@@ -1415,8 +1415,8 @@ namespace LasMonjas.Patches {
 
                 hotPotatoButton.Timer = HotPotato.transferCooldown;
 
-                new CustomMessage("<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> is the new Hot Potato!", 5, -1, 1f, 16);
-                HotPotato.hotpotatopointCounter = "Hot Potato: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "Cold Potatoes: " + "<color=#00F7FFFF>" + notPotatosAlives + "</color>";
+                new CustomMessage("<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> 是新的烫手山芋!", 5, -1, 1f, 16);
+                HotPotato.hotpotatopointCounter = "烫手山芋: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "冷山芋: " + "<color=#00F7FFFF>" + notPotatosAlives + "</color>";
             }
 
             // If notpotato disconnects, check number of notpotatos
@@ -1480,7 +1480,7 @@ namespace LasMonjas.Patches {
                         HotPotato.notPotatoTeam.Remove(HotPotato.notPotato14);
                     }
 
-                    HotPotato.hotpotatopointCounter = "Hot Potato: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "Cold Potatoes: " + "<color=#00F7FFFF>" + notPotatosAlives + "</color>";
+                    HotPotato.hotpotatopointCounter = "烫手山芋: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "冷山芋: " + "<color=#00F7FFFF>" + notPotatosAlives + "</color>";
                     break;
                 }
             }
@@ -1497,7 +1497,7 @@ namespace LasMonjas.Patches {
 
                     if (ZombieLaboratory.nursePlayer != null && survivor.PlayerId == ZombieLaboratory.nursePlayer.PlayerId) {
                         ZombieLaboratory.survivorTeam.Remove(ZombieLaboratory.nursePlayer);
-                        ZombieLaboratory.zombieLaboratoryCounter = "Key Items: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "Survivors: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "Infected: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "Zombies: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
+                        ZombieLaboratory.zombieLaboratoryCounter = "关键物品: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "幸存者: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "感染者: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "僵尸: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
                         ZombieLaboratory.triggerZombieWin = true;
                         ShipStatus.RpcEndGame((GameOverReason)CustomGameOverReason.ZombieWin, false);
                     }
@@ -1607,7 +1607,7 @@ namespace LasMonjas.Patches {
                     }
 
                     // Check win condition
-                    ZombieLaboratory.zombieLaboratoryCounter = "Key Items: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "Survivors: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "Infected: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "Zombies: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
+                    ZombieLaboratory.zombieLaboratoryCounter = "关键物品: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "幸存者: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "感染者: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "僵尸: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
                     if (ZombieLaboratory.survivorTeam.Count == 1) {
                         ZombieLaboratory.triggerZombieWin = true;
                         ShipStatus.RpcEndGame((GameOverReason)CustomGameOverReason.ZombieWin, false);
@@ -1661,7 +1661,7 @@ namespace LasMonjas.Patches {
                     else if (ZombieLaboratory.zombiePlayer14 != null && zombie.PlayerId == ZombieLaboratory.zombiePlayer14.PlayerId) {
                         ZombieLaboratory.zombieTeam.Remove(ZombieLaboratory.zombiePlayer14);
                     }
-                    ZombieLaboratory.zombieLaboratoryCounter = "Key Items: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "Survivors: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "Infected: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "Zombies: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
+                    ZombieLaboratory.zombieLaboratoryCounter = "关键物品: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "幸存者: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "感染者: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "僵尸: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
                     if (ZombieLaboratory.zombieTeam.Count <= 0) {
                         ZombieLaboratory.triggerSurvivorWin = true;
                         ShipStatus.RpcEndGame((GameOverReason)CustomGameOverReason.SurvivorWin, false);
