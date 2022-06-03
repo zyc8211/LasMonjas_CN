@@ -827,7 +827,7 @@ namespace LasMonjas
             killCooldown = PlayerControl.GameOptions.killCooldown;
             triggerBountyHunterWin = false;
             rolName = "";
-            RoleInfo.bountyHunter.shortDescription = "Hunt down your target" + rolName;
+            RoleInfo.bountyHunter.shortDescription = "追捕你的目标" + rolName;
             usedTarget = false;
             possibleTargets = new List<PlayerControl>();
         }
@@ -2432,7 +2432,7 @@ namespace LasMonjas
         public static bool triggerBlueTeamWin = false;
         public static bool triggerDrawWin = false;
 
-        public static string flagpointCounter = "Score: " + "<color=#FF0000FF>" + currentRedTeamPoints + "</color> - " + "<color=#0000FFFF>" + currentBlueTeamPoints + "</color>";
+        public static string flagpointCounter = "比分: " + "<color=#FF0000FF>" + currentRedTeamPoints + "</color> - " + "<color=#0000FFFF>" + currentBlueTeamPoints + "</color>";
 
         private static Sprite buttonSpriteTakeRedFlag;
 
@@ -2540,7 +2540,7 @@ namespace LasMonjas
             blueteamAlerted = false;
             localRedFlagArrow = new List<Arrow>();
             localBlueFlagArrow = new List<Arrow>();
-            flagpointCounter = "Score: " + "<color=#FF0000FF>" + currentRedTeamPoints + "</color> - " + "<color=#0000FFFF>" + currentBlueTeamPoints + "</color>";
+            flagpointCounter = "比分: " + "<color=#FF0000FF>" + currentRedTeamPoints + "</color> - " + "<color=#0000FFFF>" + currentBlueTeamPoints + "</color>";
         }
     }
 
@@ -2687,7 +2687,7 @@ namespace LasMonjas
         public static bool triggerThiefWin = false;
         public static bool triggerPoliceWin = false;
 
-        public static string thiefpointCounter = "Stealed Jewels: " + "<color=#FF0000FF>" + currentJewelsStoled + "/" + requiredJewels + "</color> | " + "Captured Thiefs: " + "<color=#0000FFFF>" + currentThiefsCaptured + "/ 10</color>";
+        public static string thiefpointCounter = "被盗宝石: " + "<color=#FF0000FF>" + currentJewelsStoled + "/" + requiredJewels + "</color> | " + "被捕小偷: " + "<color=#0000FFFF>" + currentThiefsCaptured + "/ 10</color>";
 
         public static List<Arrow> localThiefReleaseArrow = new List<Arrow>();
         public static List<Arrow> localThiefDeliverArrow = new List<Arrow>();
@@ -2882,7 +2882,7 @@ namespace LasMonjas
             triggerThiefWin = false;
             triggerPoliceWin = false;
             currentThiefsCaptured = 0;
-            thiefpointCounter = "Stealed Jewels: " + "<color=#00F7FFFF>" + currentJewelsStoled + "/" + requiredJewels + "</color> | " + "Captured Thiefs: " + "<color=#928B55FF>" + currentThiefsCaptured + "/" + thiefTeam.Count + "</color>";
+            thiefpointCounter = "被盗宝石: " + "<color=#00F7FFFF>" + currentJewelsStoled + "/" + requiredJewels + "</color> | " + "被捕小偷: " + "<color=#928B55FF>" + currentThiefsCaptured + "/" + thiefTeam.Count + "</color>";
         }
     }
 
@@ -2982,7 +2982,7 @@ namespace LasMonjas
         public static bool triggerYellowTeamWin = false;
         public static bool triggerDrawWin = false;
 
-        public static string kingpointCounter = "Puntuacion: " + "<color=#00FF00FF>" + currentGreenTeamPoints.ToString("F0") + "</color> - " + "<color=#FFFF00FF>" + currentYellowTeamPoints.ToString("F0") + "</color>";
+        public static string kingpointCounter = "得分: " + "<color=#00FF00FF>" + currentGreenTeamPoints.ToString("F0") + "</color> - " + "<color=#FFFF00FF>" + currentYellowTeamPoints.ToString("F0") + "</color>";
 
         private static Sprite buttonSpritePlaceGreenFlag;
 
@@ -3100,7 +3100,7 @@ namespace LasMonjas
             triggerDrawWin = false;
 
             localArrows = new List<Arrow>();
-            kingpointCounter = "Puntuacion: " + "<color=#00FF00FF>" + currentGreenTeamPoints.ToString("F0") + "</color> - " + "<color=#FFFF00FF>" + currentYellowTeamPoints.ToString("F0") + "</color>";
+            kingpointCounter = "得分: " + "<color=#00FF00FF>" + currentGreenTeamPoints.ToString("F0") + "</color> - " + "<color=#FFFF00FF>" + currentYellowTeamPoints.ToString("F0") + "</color>";
         }
     }
 
@@ -3158,7 +3158,7 @@ namespace LasMonjas
 
         public static bool triggerHotPotatoEnd = false;
 
-        public static string hotpotatopointCounter = "Hot Potato: " + "<color=#808080FF></color> | " + "Cold Potatoes: " + "<color=#00F7FFFF>" + notPotatoTeam.Count + "</color>";
+        public static string hotpotatopointCounter = "烫手山芋: " + "<color=#808080FF></color> | " + "冷山芋: " + "<color=#00F7FFFF>" + notPotatoTeam.Count + "</color>";
 
         private static Sprite buttonPotato;
 
@@ -3221,7 +3221,7 @@ namespace LasMonjas
             firstPotatoTransfered = false;
             hotPotato = null;
 
-            hotpotatopointCounter = "Hot Potato: " + "<color=#00F7FFFF></color> | " + "Cold Potatoes: " + "<color=#928B55FF>" + notPotatoTeam.Count + "</color>";
+            hotpotatopointCounter = "烫手山芋: " + "<color=#00F7FFFF></color> | " + "冷山芋: " + "<color=#928B55FF>" + notPotatoTeam.Count + "</color>";
         }
     }
 
@@ -3468,7 +3468,7 @@ namespace LasMonjas
         public static bool triggerZombieWin = false;
         public static bool triggerSurvivorWin = false;
 
-        public static string zombieLaboratoryCounter = "Key Items: " + "<color=#FF00FFFF>" + currentKeyItems + " / 6</color> | " + "Survivors: " + "<color=#00CCFFFF>" + survivorTeam.Count + "</color> " + "| " + "Infected: " + "<color=#FFFF00FF>" + infectedTeam.Count + "</color> " + "| " + "Zombies: " + "<color=#996633FF>" + zombieTeam.Count + "</color>";
+        public static string zombieLaboratoryCounter = "关键物品: " + "<color=#FF00FFFF>" + currentKeyItems + " / 6</color> | " + "幸存者: " + "<color=#00CCFFFF>" + survivorTeam.Count + "</color> " + "| " + "感染者: " + "<color=#FFFF00FF>" + infectedTeam.Count + "</color> " + "| " + "僵尸: " + "<color=#996633FF>" + zombieTeam.Count + "</color>";
 
         public static List<Arrow> localSurvivorsDeliverArrow = new List<Arrow>();
         
@@ -3811,7 +3811,7 @@ namespace LasMonjas
             laboratorytwoExitLeftButton = null;
             laboratorytwoExitRightButton = null;
 
-            zombieLaboratoryCounter = "Key Items: " + "<color=#FF00FFFF>" + currentKeyItems + " / 6</color> | " + "Survivors: " + "<color=#00CCFFFF>" + survivorTeam.Count + "</color> " + "| " + "Infected: " + "<color=#FFFF00FF>" + infectedTeam.Count + "</color> " + "| " + "Zombies: " + "<color=#996633FF>" + zombieTeam.Count + "</color>";
+            zombieLaboratoryCounter = "关键物品: " + "<color=#FF00FFFF>" + currentKeyItems + " / 6</color> | " + "幸存者: " + "<color=#00CCFFFF>" + survivorTeam.Count + "</color> " + "| " + "感染者: " + "<color=#FFFF00FF>" + infectedTeam.Count + "</color> " + "| " + "僵尸: " + "<color=#996633FF>" + zombieTeam.Count + "</color>";
 
             switch (PlayerControl.GameOptions.MapId) {
                 case 0:

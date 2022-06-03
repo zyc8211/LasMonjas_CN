@@ -346,7 +346,7 @@ namespace LasMonjas
                 }
             }
             catch (Exception e) {
-                LasMonjasPlugin.Logger.LogError("Error while deserializing options: " + e.Message);
+                LasMonjasPlugin.Logger.LogError("反序列化选项时出错: " + e.Message);
             }
         }
 
@@ -1132,7 +1132,7 @@ namespace LasMonjas
             Illusionist.lightsOutTimer = Illusionist.lightsOutDuration;
             // If the local player is impostor indicate lights out
             if (PlayerControl.LocalPlayer.Data.Role.IsImpostor && PlayerControl.LocalPlayer != Illusionist.illusionist) {
-                new CustomMessage("The Illusionist turned off the lights: ", Illusionist.lightsOutDuration, -1, -1.3f, 9);
+                new CustomMessage("骗术师关闭了灯光: ", Illusionist.lightsOutDuration, -1, -1.3f, 9);
             }
         }
 
@@ -1185,7 +1185,7 @@ namespace LasMonjas
             SoundManager.Instance.PlaySound(CustomMain.customAssets.bombermanBombMusic, true, 75f);
             SoundManager.Instance.StopSound(CustomMain.customAssets.performerMusic);
             // Indicate bomb text
-            new CustomMessage("There's a Bomb on the map: ", Bomberman.bombTimer, Bomberman.currentBombNumber, -1.3f, 1);
+            new CustomMessage("有人安装了炸弹: ", Bomberman.bombTimer, Bomberman.currentBombNumber, -1.3f, 1);
         }
 
         public static void fixBomb() {
@@ -1261,7 +1261,7 @@ namespace LasMonjas
                         if (MapBehaviour.Instance) {
                             MapBehaviour.Instance.Close();
                         }
-                        new CustomMessage("Petrified!", Medusa.duration, -1, 1.6f, 14);
+                        new CustomMessage("石化了!", Medusa.duration, -1, 1.6f, 14);
                     }
                     player.moveable = false;
                     player.NetTransform.Halt(); // Stop current movement
@@ -1455,155 +1455,155 @@ namespace LasMonjas
                 }
 
                 if (BountyHunter.hasToKill == Joker.joker) {
-                    BountyHunter.rolName = ": <color=#808080FF>Joker</color>";
+                    BountyHunter.rolName = ": <color=#808080FF>小丑</color>";
                 }
                 else if (BountyHunter.hasToKill == RoleThief.rolethief) {
-                    BountyHunter.rolName = ": <color=#808080FF>Role Thief</color>";
+                    BountyHunter.rolName = ": <color=#808080FF>身份窃贼</color>";
                 }
                 else if (BountyHunter.hasToKill == Pyromaniac.pyromaniac) {
-                    BountyHunter.rolName = ": <color=#808080FF>Pyromaniac</color>";
+                    BountyHunter.rolName = ": <color=#808080FF>纵火犯</color>";
                 }
                 else if (BountyHunter.hasToKill == TreasureHunter.treasureHunter) {
-                    BountyHunter.rolName = ": <color=#808080FF>Treasure Hunter</color>";
+                    BountyHunter.rolName = ": <color=#808080FF>寻宝猎人</color>";
                 }
                 else if (BountyHunter.hasToKill == Devourer.devourer) {
-                    BountyHunter.rolName = ": <color=#808080FF>Devourer</color>";
+                    BountyHunter.rolName = ": <color=#808080FF>秃鹫</color>";
                 }
                 else if (BountyHunter.hasToKill == Poisoner.poisoner) {
-                    BountyHunter.rolName = ": <color=#808080FF>Poisoner</color>";
+                    BountyHunter.rolName = ": <color=#808080FF>疫医</color>";
                 }
                 else if (BountyHunter.hasToKill == Puppeteer.puppeteer) {
-                    BountyHunter.rolName = ": <color=#808080FF>Puppeteer</color>";
+                    BountyHunter.rolName = ": <color=#808080FF>傀儡师</color>";
                 }
                 else if (BountyHunter.hasToKill == Captain.captain) {
-                    BountyHunter.rolName = ": <color=#5E3E7DFF>Captain</color>";
+                    BountyHunter.rolName = ": <color=#5E3E7DFF>舰长</color>";
                 }
                 else if (BountyHunter.hasToKill == Mechanic.mechanic) {
-                    BountyHunter.rolName = ": <color=#7F4C00FF>Mechanic</color>"; ;
+                    BountyHunter.rolName = ": <color=#7F4C00FF>工程师</color>"; ;
                 }
                 else if (BountyHunter.hasToKill == Sheriff.sheriff) {
-                    BountyHunter.rolName = ": <color=#FFFF00FF>Sheriff</color>";
+                    BountyHunter.rolName = ": <color=#FFFF00FF>警长</color>";
                 }
                 else if (BountyHunter.hasToKill == Detective.detective) {
-                    BountyHunter.rolName = ": <color=#C85ABEFF>Detective</color>";
+                    BountyHunter.rolName = ": <color=#C85ABEFF>侦探</color>";
                 }
                 else if (BountyHunter.hasToKill == Forensic.forensic) {
-                    BountyHunter.rolName = ": <color=#4E61FFFF>Forensic</color>";
+                    BountyHunter.rolName = ": <color=#4E61FFFF>法医</color>";
                 }
                 else if (BountyHunter.hasToKill == TimeTraveler.timeTraveler) {
-                    BountyHunter.rolName = ": <color=#00BDFFFF>Time Traveler</color>";
+                    BountyHunter.rolName = ": <color=#00BDFFFF>时间之主</color>";
                 }
                 else if (BountyHunter.hasToKill == Squire.squire) {
-                    BountyHunter.rolName = ": <color=#00FF00FF>Squire</color>";
+                    BountyHunter.rolName = ": <color=#00FF00FF>医生</color>";
                 }
                 else if (BountyHunter.hasToKill == Cheater.cheater) {
-                    BountyHunter.rolName = ": <color=#666699FF>Cheater</color>";
+                    BountyHunter.rolName = ": <color=#666699FF>换票师</color>";
                 }
                 else if (BountyHunter.hasToKill == FortuneTeller.fortuneTeller) {
-                    BountyHunter.rolName = ": <color=#00C642FF>Fortune Teller</color>";
+                    BountyHunter.rolName = ": <color=#00C642FF>预言家</color>";
                 }
                 else if (BountyHunter.hasToKill == Hacker.hacker) {
-                    BountyHunter.rolName = ": <color=#72FFACFF>Hacker</color>";
+                    BountyHunter.rolName = ": <color=#72FFACFF>黑客</color>";
                 }
                 else if (BountyHunter.hasToKill == Sleuth.sleuth) {
-                    BountyHunter.rolName = ": <color=#009F57FF>Sleuth</color>";
+                    BountyHunter.rolName = ": <color=#009F57FF>追踪者</color>";
                 }
                 else if (BountyHunter.hasToKill == Fink.fink) {
-                    BountyHunter.rolName = ": <color=#FF73F6FF>Fink</color>";
+                    BountyHunter.rolName = ": <color=#FF73F6FF>告密者</color>";
                 }
                 else if (BountyHunter.hasToKill == Welder.welder) {
-                    BountyHunter.rolName = ": <color=#6D5B2FFF>Welder</color>";
+                    BountyHunter.rolName = ": <color=#6D5B2FFF>焊工</color>";
                 }
                 else if (BountyHunter.hasToKill == Spiritualist.spiritualist) {
-                    BountyHunter.rolName = ": <color=#FFC5E1FF>Spiritualist</color>";
+                    BountyHunter.rolName = ": <color=#FFC5E1FF>殉道者</color>";
                 }
                 else if (BountyHunter.hasToKill == Coward.coward) {
-                    BountyHunter.rolName = ": <color=#00F7E1FF>Coward</color>";
+                    BountyHunter.rolName = ": <color=#00F7E1FF>怯懦者</color>";
                 }
                 else if (BountyHunter.hasToKill == Vigilant.vigilant) {
-                    BountyHunter.rolName = ": <color=#E3E15AFF>Vigilant</color>";
+                    BountyHunter.rolName = ": <color=#E3E15AFF>哨兵</color>";
                 }
                 else if (BountyHunter.hasToKill == Vigilant.vigilantMira) {
-                    BountyHunter.rolName = ": <color=#E3E15AFF>Vigilant</color>";
+                    BountyHunter.rolName = ": <color=#E3E15AFF>哨兵</color>";
                 }
                 else if (BountyHunter.hasToKill == Hunter.hunter) {
-                    BountyHunter.rolName = ": <color=#E1EB90FF>Hunter</color>";
+                    BountyHunter.rolName = ": <color=#E1EB90FF>猎人</color>";
                 }
                 else if (BountyHunter.hasToKill == Jinx.jinx) {
-                    BountyHunter.rolName = ": <color=#928B55FF>Jinx</color>";
+                    BountyHunter.rolName = ": <color=#928B55FF>扫把星</color>";
                 }
                 else if (BountyHunter.hasToKill == Bat.bat) {
-                    BountyHunter.rolName = ": <color=#A600FFFF>Bat</color>";
+                    BountyHunter.rolName = ": <color=#A600FFFF>蝙蝠侠</color>";
                 }
                 else if (BountyHunter.hasToKill == Necromancer.necromancer) {
-                    BountyHunter.rolName = ": <color=#FF73F6FF>Necromancer</color>";
+                    BountyHunter.rolName = ": <color=#FF73F6FF>死灵法师</color>";
                 }
                 else if (BountyHunter.hasToKill == Engineer.engineer) {
-                    BountyHunter.rolName = ": <color=#7F4C00FF>Engineer</color>";
+                    BountyHunter.rolName = ": <color=#7F4C00FF>机关师</color>";
                 }
                 else if (BountyHunter.hasToKill == Shy.shy) {
-                    BountyHunter.rolName = ": <color=#F2BEFFFF>Shy</color>";
+                    BountyHunter.rolName = ": <color=#F2BEFFFF>内敛者</color>";
                 }
                 else if (BountyHunter.hasToKill == Mimic.mimic) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Mimic</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>化形者</color>";
                 }
                 else if (BountyHunter.hasToKill == Painter.painter) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Painter</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>隐蔽者</color>";
                 }
                 else if (BountyHunter.hasToKill == Demon.demon) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Demon</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>吸血鬼</color>";
                 }
                 else if (BountyHunter.hasToKill == Janitor.janitor) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Janitor</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>清理者</color>";
                 }
                 else if (BountyHunter.hasToKill == Illusionist.illusionist) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Illusionist</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>骗术师</color>";
                 }
                 else if (BountyHunter.hasToKill == Manipulator.manipulator) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Manipulator</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>术士</color>";
                 }
                 else if (BountyHunter.hasToKill == Bomberman.bomberman) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Bomberman</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>爆破者</color>";
                 }
                 else if (BountyHunter.hasToKill == Chameleon.chameleon) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Chameleon</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>隐身人</color>";
                 }
                 else if (BountyHunter.hasToKill == Gambler.gambler) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Gambler</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>赌徒</color>";
                 }
                 else if (BountyHunter.hasToKill == Sorcerer.sorcerer) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Sorcerer</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>女巫</color>";
                 }
                 else if (BountyHunter.hasToKill == Medusa.medusa) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Medusa</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>美杜莎</color>";
                 }
                 else if (BountyHunter.hasToKill == Archer.archer) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Archer</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>弓箭手</color>";
                 }
                 else if (BountyHunter.hasToKill == Hypnotist.hypnotist) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Hypnotist</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>催眠师</color>";
                 }
                 else if (BountyHunter.hasToKill == Modifiers.lighter) {
-                    BountyHunter.rolName = ": <color=#F08048FF>Lighter</color>";
+                    BountyHunter.rolName = ": <color=#F08048FF>执灯人</color>";
                 }
                 else if (BountyHunter.hasToKill == Modifiers.blind) {
-                    BountyHunter.rolName = ": <color=#F08048FF>Blind</color>";
+                    BountyHunter.rolName = ": <color=#F08048FF>失明者</color>";
                 }
                 else if (BountyHunter.hasToKill == Modifiers.flash) {
-                    BountyHunter.rolName = ": <color=#F08048FF>Flash</color>";
+                    BountyHunter.rolName = ": <color=#F08048FF>闪电侠</color>";
                 }
                 else if (BountyHunter.hasToKill == Modifiers.pro) {
-                    BountyHunter.rolName = ": <color=#F08048FF>Pro</color>";
+                    BountyHunter.rolName = ": <color=#F08048FF>醉鬼</color>";
                 }
                 else if (BountyHunter.hasToKill.Data.Role.IsImpostor) {
-                    BountyHunter.rolName = ": <color=#FF0000FF>Impostor</color>";
+                    BountyHunter.rolName = ": <color=#FF0000FF>伪装者</color>";
                 }
                 else {
-                    BountyHunter.rolName = ": <color=#8DFFFFFF>Crewmate</color>";
+                    BountyHunter.rolName = ": <color=#8DFFFFFF>船员</color>";
                 }
             }
 
-            RoleInfo.bountyHunter.shortDescription = "Hunt down your target" + BountyHunter.rolName;
+            RoleInfo.bountyHunter.shortDescription = "猎杀你的目标" + BountyHunter.rolName;
             BountyHunter.usedTarget = true;
         }
 
@@ -1759,7 +1759,7 @@ namespace LasMonjas
             if (Minigame.Instance)
                 Minigame.Instance.ForceClose();
 
-            new CustomMessage("Time Left: ", Challenger.duelDuration, -1, -1.3f, 2);
+            new CustomMessage("剩余时间: ", Challenger.duelDuration, -1, -1.3f, 2);
 
             // music stop and play duel music
             changeMusic(8);
@@ -2240,7 +2240,7 @@ namespace LasMonjas
                 if (MapBehaviour.Instance) {
                     MapBehaviour.Instance.Close();
                 }
-                new CustomMessage("Fink is using Hawkeye!", Fink.duration, -1, -1f, 13);
+                new CustomMessage("告密者使用了鹰眼!", Fink.duration, -1, -1f, 13);
             }
         }
 
@@ -2797,7 +2797,7 @@ namespace LasMonjas
                         case 16:
                             if (CaptureTheFlag.redPlayerWhoHasBlueFlag != null && player.PlayerId == CaptureTheFlag.redPlayerWhoHasBlueFlag.PlayerId) {
                                 if (PlayerControl.LocalPlayer == CaptureTheFlag.stealerPlayer) {
-                                    new CustomMessage("You're the new <color=#FF0000FF>Red Team</color> player now!", 5, -1, 1.6f, 4);
+                                    new CustomMessage("你是新的 <color=#FF0000FF>红队</color> 成员!", 5, -1, 1.6f, 4);
                                 }
                                 if (CaptureTheFlag.redplayer01 != null && CaptureTheFlag.redplayer01 == CaptureTheFlag.redPlayerWhoHasBlueFlag) {
                                     CaptureTheFlag.redteamFlag.Remove(CaptureTheFlag.redplayer01);
@@ -2851,7 +2851,7 @@ namespace LasMonjas
                             }
                             else if (CaptureTheFlag.bluePlayerWhoHasRedFlag != null && player.PlayerId == CaptureTheFlag.bluePlayerWhoHasRedFlag.PlayerId) {
                                 if (PlayerControl.LocalPlayer == CaptureTheFlag.stealerPlayer) {
-                                    new CustomMessage("You're the new <color=#0000FFFF>Blue Team</color> player now!", 5, -1, 1.6f, 4);
+                                    new CustomMessage("你是新的 <color=#0000FFFF>蓝队</color> 成员!", 5, -1, 1.6f, 4);
                                 }
                                 if (CaptureTheFlag.blueplayer01 != null && CaptureTheFlag.blueplayer01 == CaptureTheFlag.bluePlayerWhoHasRedFlag) {
                                     CaptureTheFlag.blueteamFlag.Remove(CaptureTheFlag.blueplayer01);
@@ -2929,7 +2929,7 @@ namespace LasMonjas
                     CaptureTheFlag.redteamAlerted = true;
                     foreach (PlayerControl redplayer in CaptureTheFlag.redteamFlag) {
                         if (redplayer == PlayerControl.LocalPlayer && redplayer != null) {
-                            new CustomMessage("Your flag has been stolen!", 5, -1, 1f, 4);
+                            new CustomMessage("你的旗帜被偷走了!", 5, -1, 1f, 4);
                         }
                     }
                 }
@@ -2948,7 +2948,7 @@ namespace LasMonjas
                     CaptureTheFlag.blueteamAlerted = true;
                     foreach (PlayerControl blueplayer in CaptureTheFlag.blueteamFlag) {
                         if (blueplayer == PlayerControl.LocalPlayer && blueplayer != null) {
-                            new CustomMessage("Your flag has been stolen!", 5, -1, 1f, 4);
+                            new CustomMessage("你的旗帜被偷走了!", 5, -1, 1f, 4);
                         }
                     }
                 }
@@ -2993,8 +2993,8 @@ namespace LasMonjas
                         break;
                 }
                 CaptureTheFlag.currentRedTeamPoints += 1;
-                new CustomMessage("<color=#FF0000FF>Red Team</color> scored!", 5, -1, 1.6f, 4);
-                CaptureTheFlag.flagpointCounter = "Score: " + "<color=#FF0000FF>" + CaptureTheFlag.currentRedTeamPoints + "</color> - " + "<color=#0000FFFF>" + CaptureTheFlag.currentBlueTeamPoints + "</color>";
+                new CustomMessage("<color=#FF0000FF>红队</color> 得分!", 5, -1, 1.6f, 4);
+                CaptureTheFlag.flagpointCounter = "比分: " + "<color=#FF0000FF>" + CaptureTheFlag.currentRedTeamPoints + "</color> - " + "<color=#0000FFFF>" + CaptureTheFlag.currentBlueTeamPoints + "</color>";
                 if (CaptureTheFlag.currentRedTeamPoints >= CaptureTheFlag.requiredFlags) {
                     CaptureTheFlag.triggerRedTeamWin = true;
                     ShipStatus.RpcEndGame((GameOverReason)CustomGameOverReason.RedTeamFlagWin, false);
@@ -3038,8 +3038,8 @@ namespace LasMonjas
                         break;
                 }
                 CaptureTheFlag.currentBlueTeamPoints += 1;
-                new CustomMessage("<color=#0000FFFF>Blue Team</color> scored!", 5, -1, 1.3f, 4);
-                CaptureTheFlag.flagpointCounter = "Score: " + "<color=#FF0000FF>" + CaptureTheFlag.currentRedTeamPoints + "</color> - " + "<color=#0000FFFF>" + CaptureTheFlag.currentBlueTeamPoints + "</color>";
+                new CustomMessage("<color=#0000FFFF>蓝队</color> 得分!", 5, -1, 1.3f, 4);
+                CaptureTheFlag.flagpointCounter = "比分: " + "<color=#FF0000FF>" + CaptureTheFlag.currentRedTeamPoints + "</color> - " + "<color=#0000FFFF>" + CaptureTheFlag.currentBlueTeamPoints + "</color>";
                 if (CaptureTheFlag.currentBlueTeamPoints >= CaptureTheFlag.requiredFlags) {
                     CaptureTheFlag.triggerBlueTeamWin = true;
                     ShipStatus.RpcEndGame((GameOverReason)CustomGameOverReason.BlueTeamFlagWin, false);
@@ -3204,8 +3204,8 @@ namespace LasMonjas
                             break;
                     }
                     PoliceAndThief.currentThiefsCaptured += 1;
-                    new CustomMessage("A <color=#928B55FF>Thief</color> has been captured!", 5, -1, 1.3f, 7);
-                    PoliceAndThief.thiefpointCounter = "Stolen Jewels: " + "<color=#00F7FFFF>" + PoliceAndThief.currentJewelsStoled + "/" + PoliceAndThief.requiredJewels + "</color> | " + "Captured Thiefs: " + "<color=#928B55FF>" + PoliceAndThief.currentThiefsCaptured + "/" + PoliceAndThief.thiefTeam.Count + "</color>";
+                    new CustomMessage("一个 <color=#928B55FF>小偷</color> 被逮捕了!", 5, -1, 1.3f, 7);
+                    PoliceAndThief.thiefpointCounter = "被盗宝石: " + "<color=#00F7FFFF>" + PoliceAndThief.currentJewelsStoled + "/" + PoliceAndThief.requiredJewels + "</color> | " + "被捕小偷: " + "<color=#928B55FF>" + PoliceAndThief.currentThiefsCaptured + "/" + PoliceAndThief.thiefTeam.Count + "</color>";
                     if (PoliceAndThief.currentThiefsCaptured == PoliceAndThief.thiefTeam.Count) {
                         PoliceAndThief.triggerPoliceWin = true;
                         ShipStatus.RpcEndGame((GameOverReason)CustomGameOverReason.ThiefModePoliceWin, false);
@@ -3254,8 +3254,8 @@ namespace LasMonjas
             }
             PoliceAndThief.thiefArrested.RemoveAt(0);
             PoliceAndThief.currentThiefsCaptured = PoliceAndThief.currentThiefsCaptured - 1;
-            new CustomMessage("A <color=#928B55FF>Thief</color> has been released!", 5, -1, 1f, 7);
-            PoliceAndThief.thiefpointCounter = "Stolen Jewels: " + "<color=#00F7FFFF>" + PoliceAndThief.currentJewelsStoled + "/" + PoliceAndThief.requiredJewels + "</color> | " + "Captured Thiefs: " + "<color=#928B55FF>" + PoliceAndThief.currentThiefsCaptured + "/" + PoliceAndThief.thiefTeam.Count + "</color>";
+            new CustomMessage("一个 <color=#928B55FF>小偷</color>  被释放了!", 5, -1, 1f, 7);
+            PoliceAndThief.thiefpointCounter = "被盗珠宝: " + "<color=#00F7FFFF>" + PoliceAndThief.currentJewelsStoled + "/" + PoliceAndThief.requiredJewels + "</color> | " + "被捕小偷: " + "<color=#928B55FF>" + PoliceAndThief.currentThiefsCaptured + "/" + PoliceAndThief.thiefTeam.Count + "</color>";
         }
 
         public static void policeandThiefTakeJewel(byte thiefWhoTookATreasure, byte jewelId) {
@@ -3597,8 +3597,8 @@ namespace LasMonjas
 
             }
             PoliceAndThief.currentJewelsStoled += 1;
-            new CustomMessage("A <color=#00F7FFFF>Jewel</color> has been delivered!", 5, -1, 1.6f, 7);
-            PoliceAndThief.thiefpointCounter = "Stolen Jewels: " + "<color=#00F7FFFF>" + PoliceAndThief.currentJewelsStoled + "/" + PoliceAndThief.requiredJewels + "</color> | " + "Captured Thiefs: " + "<color=#928B55FF>" + PoliceAndThief.currentThiefsCaptured + "/" + PoliceAndThief.thiefTeam.Count + "</color>";
+            new CustomMessage("一颗 <color=#00F7FFFF>宝石</color> 被运送完成!", 5, -1, 1.6f, 7);
+            PoliceAndThief.thiefpointCounter = "被盗宝石: " + "<color=#00F7FFFF>" + PoliceAndThief.currentJewelsStoled + "/" + PoliceAndThief.requiredJewels + "</color> | " + "被捕小偷: " + "<color=#928B55FF>" + PoliceAndThief.currentThiefsCaptured + "/" + PoliceAndThief.thiefTeam.Count + "</color>";
             if (PoliceAndThief.currentJewelsStoled >= PoliceAndThief.requiredJewels) {
                 PoliceAndThief.triggerThiefWin = true;
                 ShipStatus.RpcEndGame((GameOverReason)CustomGameOverReason.ThiefModeThiefWin, false);
@@ -4325,7 +4325,7 @@ namespace LasMonjas
                                 }
                                 KingOfTheHill.greenkingaura.transform.parent = KingOfTheHill.greenKingplayer.transform;
                                 if (PlayerControl.LocalPlayer == KingOfTheHill.greenKingplayer) {
-                                    new CustomMessage("You're the new <color=#00FF00FF>Green King</color>!", 5, -1, 1.6f, 11);
+                                    new CustomMessage("你是新的 <color=#00FF00FF>绿队国王</color>!", 5, -1, 1.6f, 11);
                                 }
                                 KingOfTheHill.greenKingplayer.MurderPlayer(KingOfTheHill.usurperPlayer);
                             }
@@ -4342,7 +4342,7 @@ namespace LasMonjas
                                 }
                                 KingOfTheHill.yellowkingaura.transform.parent = KingOfTheHill.yellowKingplayer.transform;
                                 if (PlayerControl.LocalPlayer == KingOfTheHill.yellowKingplayer) {
-                                    new CustomMessage("You're the new <color=#FFFF00FF>Yellow King</color>!", 5, -1, 1.6f, 11);
+                                    new CustomMessage("你是新的 <color=#FFFF00FF>黄队国王</color>!", 5, -1, 1.6f, 11);
                                 }
                                 KingOfTheHill.yellowKingplayer.MurderPlayer(KingOfTheHill.usurperPlayer);
                             } else {
@@ -4406,7 +4406,7 @@ namespace LasMonjas
                     KingOfTheHill.yellowteamAlerted = true;
                     foreach (PlayerControl yellowplayer in KingOfTheHill.yellowTeam) {
                         if (yellowplayer == PlayerControl.LocalPlayer && yellowplayer != null) {
-                            new CustomMessage("<color=#00FF00FF>Green King</color> has captured a zone!", 5, -1, 1.3f, 11);
+                            new CustomMessage("<color=#00FF00FF>绿队国王</color> 占领了一块领地!", 5, -1, 1.3f, 11);
                         }
                     }
                 }
@@ -4458,7 +4458,7 @@ namespace LasMonjas
                     KingOfTheHill.greenteamAlerted = true;
                     foreach (PlayerControl greenplayer in KingOfTheHill.greenTeam) {
                         if (greenplayer == PlayerControl.LocalPlayer && greenplayer != null) {
-                            new CustomMessage("<color=#FFFF00FF>Yellow King</color> has captured a zone!", 5, -1, 1.3f, 11);
+                            new CustomMessage("<color=#FFFF00FF>黄队国王</color> 占领了一块领地!", 5, -1, 1.3f, 11);
                         }
                     }
                 }
@@ -4473,9 +4473,9 @@ namespace LasMonjas
 
                     if (!HotPotato.firstPotatoTransfered) {
                         HotPotato.firstPotatoTransfered = true;
-                        new CustomMessage("Hot Potato: ", HotPotato.matchDuration, -1, -1f, 18);
-                        new CustomMessage("Time Left: ", HotPotato.matchDuration, -1, -1.3f, 15);
-                        HotPotato.hotpotatopointCounter = "Hot Potato: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "Cold Potatoes: " + "<color=#00F7FFFF>" + HotPotato.notPotatoTeam.Count + "</color>";
+                        new CustomMessage("烫手山芋: ", HotPotato.matchDuration, -1, -1f, 18);
+                        new CustomMessage("剩余时间: ", HotPotato.matchDuration, -1, -1.3f, 15);
+                        HotPotato.hotpotatopointCounter = "烫手山芋: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "冷山芋: " + "<color=#00F7FFFF>" + HotPotato.notPotatoTeam.Count + "</color>";
                         new CustomMessage(HotPotato.hotpotatopointCounter, HotPotato.matchDuration, -1, 1.9f, 17);
                     }
 
@@ -4569,9 +4569,9 @@ namespace LasMonjas
                         }
                     }
 
-                    new CustomMessage("<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> is the new Hot Potato!", 5, -1, 1f, 16);
+                    new CustomMessage("<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> 是新的烫手山芋!", 5, -1, 1f, 16);
 
-                    HotPotato.hotpotatopointCounter = "Hot Potato: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "Cold Potatoes: " + "<color=#00F7FFFF>" + HotPotato.notPotatoTeam.Count + "</color>";
+                    HotPotato.hotpotatopointCounter = "烫手山芋: " + "<color=#808080FF>" + HotPotato.hotPotatoPlayer.name + "</color> | " + "冷山芋: " + "<color=#00F7FFFF>" + HotPotato.notPotatoTeam.Count + "</color>";
 
                     // Set custom cooldown to the hotpotato button
                     hotPotatoButton.Timer = HotPotato.transferCooldown;
@@ -4968,8 +4968,8 @@ namespace LasMonjas
             }
 
             ZombieLaboratory.currentKeyItems += 1;
-            new CustomMessage("A <color=#FF00FFFF>Key Item</color> has been delivered!", 5, -1, 1.6f, 21);
-            ZombieLaboratory.zombieLaboratoryCounter = "Key Items: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "Survivors: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "Infected: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "Zombies: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
+            new CustomMessage("一个 <color=#FF00FFFF>关键物品</color> 被找到了!", 5, -1, 1.6f, 21);
+            ZombieLaboratory.zombieLaboratoryCounter = "关键物品: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "幸存者: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "感染者: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "僵尸: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
             if (ZombieLaboratory.currentKeyItems >= 6) {
                 ZombieLaboratory.nursePlayerHasCureReady = true;
             }
@@ -5203,8 +5203,8 @@ namespace LasMonjas
                         }
                     }
 
-                    new CustomMessage("A <color=#00CCFFFF>Survivor</color> has been <color=#FFFF00FF>Infected</color>!", 5, -1, 1.3f, 21);
-                    ZombieLaboratory.zombieLaboratoryCounter = "Key Items: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "Survivors: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "Infected: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "Zombies: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
+                    new CustomMessage("一个 <color=#00CCFFFF>幸存者</color> 被 <color=#FFFF00FF>感染</color>了!", 5, -1, 1.3f, 21);
+                    ZombieLaboratory.zombieLaboratoryCounter = "关键物品: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "幸存者: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "感染者: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "僵尸: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
 
                     HudManager.Instance.StartCoroutine(Effects.Lerp(ZombieLaboratory.timeForHeal, new Action<float>((p) => { // Delayed action
                         if (p == 1f && !player.Data.IsDead && !player.Data.Disconnected) {
@@ -5571,8 +5571,8 @@ namespace LasMonjas
                                 }
                             }
 
-                            new CustomMessage("A <color=#00CCFFFF>Survivor</color> turned into a <color=#996633FF>Zombie</color>!", 5, -1, 1f, 21);
-                            ZombieLaboratory.zombieLaboratoryCounter = "Key Items: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "Survivors: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "Infected: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "Zombies: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
+                            new CustomMessage("一个 <color=#00CCFFFF>幸存者</color> 变成了 <color=#996633FF>僵尸</color>!", 5, -1, 1f, 21);
+                            ZombieLaboratory.zombieLaboratoryCounter = "关键物品: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "幸存者: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "感染者: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "僵尸: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
                             // Check win condition
                             if (ZombieLaboratory.survivorTeam.Count == 1) {
                                 ZombieLaboratory.triggerZombieWin = true;
@@ -5788,7 +5788,7 @@ namespace LasMonjas
                         ZombieLaboratory.infectedTeam.Remove(ZombieLaboratory.survivorPlayer13);
                     }
                     ZombieLaboratory.laboratoryNurseMedKit.SetActive(false);
-                    ZombieLaboratory.zombieLaboratoryCounter = "Key Items: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "Survivors: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "Infected: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "Zombies: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
+                    ZombieLaboratory.zombieLaboratoryCounter = "关键物品: " + "<color=#FF00FFFF>" + ZombieLaboratory.currentKeyItems + " / 6</color> | " + "幸存者: " + "<color=#00CCFFFF>" + ZombieLaboratory.survivorTeam.Count + "</color> " + "| " + "感染者: " + "<color=#FFFF00FF>" + ZombieLaboratory.infectedTeam.Count + "</color> " + "| " + "僵尸: " + "<color=#996633FF>" + ZombieLaboratory.zombieTeam.Count + "</color>";
                 }
                 SoundManager.Instance.PlaySound(CustomMain.customAssets.spiritualistRevive, false, 100f);
                 if (player.PlayerId == targetId && targetId == PlayerControl.LocalPlayer.PlayerId) {

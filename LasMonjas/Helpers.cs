@@ -28,7 +28,7 @@ namespace LasMonjas
                 Texture2D texture = loadTextureFromResources(path);
                 return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f), pixelsPerUnit);
             } catch {
-                System.Console.WriteLine("Error loading sprite from path: " + path);
+                System.Console.WriteLine("从路径加载图形时出错: " + path);
             }
             return null;
         }
@@ -44,7 +44,7 @@ namespace LasMonjas
                 ImageConversion.LoadImage(texture, byteTexture, false);
                 return texture;
             } catch {
-                System.Console.WriteLine("Error loading texture from resources: " + path);
+                System.Console.WriteLine("从资源中加载纹理时出错: " + path);
             }
             return null;
         }
@@ -58,7 +58,7 @@ namespace LasMonjas
                     return texture;
                 }
             } catch {
-                System.Console.WriteLine("Error loading texture from disk: " + path);
+                System.Console.WriteLine("从硬盘中加载纹理时出错: " + path);
             }
             return null;
         }
@@ -127,8 +127,8 @@ namespace LasMonjas
                 task.transform.SetParent(player.transform, false);
 
                 if (roleInfo.name == "Renegade") {
-                    var getMinionText = Renegade.canRecruitMinion ? " and recruit a Minion" : "";
-                    task.Text = cs(roleInfo.color, $"{roleInfo.name}: Kill everyone{getMinionText}");  
+                    var getMinionText = Renegade.canRecruitMinion ? " 招募一个爪牙" : "";
+                    task.Text = cs(roleInfo.color, $"{roleInfo.name}: 杀死所有人{getMinionText}");  
                 } else {
                     task.Text = cs(roleInfo.color, $"{roleInfo.name}: {roleInfo.shortDescription}");  
                 }

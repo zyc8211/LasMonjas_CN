@@ -28,187 +28,187 @@ namespace LasMonjas
         }
 
         // Capture the Flag Teams
-        public static RoleInfo redplayer01 = new RoleInfo("Red Team", Color.red, "Steal <color=#0000FFFF>Blue Team</color> flag", "Steal <color=#0000FFFF>Blue Team</color> flag", RoleId.RedPlayer01);
-        public static RoleInfo redplayer02 = new RoleInfo("Red Team", Color.red, "Steal <color=#0000FFFF>Blue Team</color> flag", "Steal <color=#0000FFFF>Blue Team</color> flag", RoleId.RedPlayer02);
-        public static RoleInfo redplayer03 = new RoleInfo("Red Team", Color.red, "Steal <color=#0000FFFF>Blue Team</color> flag", "Steal <color=#0000FFFF>Blue Team</color> flag", RoleId.RedPlayer03);
-        public static RoleInfo redplayer04 = new RoleInfo("Red Team", Color.red, "Steal <color=#0000FFFF>Blue Team</color> flag", "Steal <color=#0000FFFF>Blue Team</color> flag", RoleId.RedPlayer04);
-        public static RoleInfo redplayer05 = new RoleInfo("Red Team", Color.red, "Steal <color=#0000FFFF>Blue Team</color> flag", "Steal <color=#0000FFFF>Blue Team</color> flag", RoleId.RedPlayer05);
-        public static RoleInfo redplayer06 = new RoleInfo("Red Team", Color.red, "Steal <color=#0000FFFF>Blue Team</color> flag", "Steal <color=#0000FFFF>Blue Team</color> flag", RoleId.RedPlayer06);
-        public static RoleInfo redplayer07 = new RoleInfo("Red Team", Color.red, "Steal <color=#0000FFFF>Blue Team</color> flag", "Steal <color=#0000FFFF>Blue Team</color> flag", RoleId.RedPlayer07);
-        public static RoleInfo blueplayer01 = new RoleInfo("Blue Team", Color.blue, "Steal <color=#FF0000FF>Red Team</color> flag", "Steal <color=#FF0000FF>Red Team</color> flag", RoleId.BluePlayer01);
-        public static RoleInfo blueplayer02 = new RoleInfo("Blue Team", Color.blue, "Steal <color=#FF0000FF>Red Team</color> flag", "Steal <color=#FF0000FF>Red Team</color> flag", RoleId.BluePlayer02);
-        public static RoleInfo blueplayer03 = new RoleInfo("Blue Team", Color.blue, "Steal <color=#FF0000FF>Red Team</color> flag", "Steal <color=#FF0000FF>Red Team</color> flag", RoleId.BluePlayer03);
-        public static RoleInfo blueplayer04 = new RoleInfo("Blue Team", Color.blue, "Steal <color=#FF0000FF>Red Team</color> flag", "Steal <color=#FF0000FF>Red Team</color> flag", RoleId.BluePlayer04);
-        public static RoleInfo blueplayer05 = new RoleInfo("Blue Team", Color.blue, "Steal <color=#FF0000FF>Red Team</color> flag", "Steal <color=#FF0000FF>Red Team</color> flag", RoleId.BluePlayer05);
-        public static RoleInfo blueplayer06 = new RoleInfo("Blue Team", Color.blue, "Steal <color=#FF0000FF>Red Team</color> flag", "Steal <color=#FF0000FF>Red Team</color> flag", RoleId.BluePlayer06);
-        public static RoleInfo blueplayer07 = new RoleInfo("Blue Team", Color.blue, "Steal <color=#FF0000FF>Red Team</color> flag", "Steal <color=#FF0000FF>Red Team</color> flag", RoleId.BluePlayer07);
-        public static RoleInfo stealerplayer = new RoleInfo("Flag Stealer", Color.grey, "Kill the player with a flag to switch teams with it", "Kill the player with \na flag to switch teams with it", RoleId.StealerPlayer);
+        public static RoleInfo redplayer01 = new RoleInfo("红队", Color.red, "窃取 <color=#0000FFFF>蓝队</color> 旗帜", "窃取 <color=#0000FFFF>蓝队</color> 旗帜", RoleId.RedPlayer01);
+        public static RoleInfo redplayer02 = new RoleInfo("红队", Color.red, "窃取 <color=#0000FFFF>蓝队</color> 旗帜", "窃取 <color=#0000FFFF>蓝队</color> 旗帜", RoleId.RedPlayer02);
+        public static RoleInfo redplayer03 = new RoleInfo("红队", Color.red, "窃取 <color=#0000FFFF>蓝队</color> 旗帜", "窃取 <color=#0000FFFF>蓝队</color> 旗帜", RoleId.RedPlayer03);
+        public static RoleInfo redplayer04 = new RoleInfo("红队", Color.red, "窃取 <color=#0000FFFF>蓝队</color> 旗帜", "窃取 <color=#0000FFFF>蓝队</color> 旗帜", RoleId.RedPlayer04);
+        public static RoleInfo redplayer05 = new RoleInfo("红队", Color.red, "窃取 <color=#0000FFFF>蓝队</color> 旗帜", "窃取 <color=#0000FFFF>蓝队</color> 旗帜", RoleId.RedPlayer05);
+        public static RoleInfo redplayer06 = new RoleInfo("红队", Color.red, "窃取 <color=#0000FFFF>蓝队</color> 旗帜", "窃取 <color=#0000FFFF>蓝队</color> 旗帜", RoleId.RedPlayer06);
+        public static RoleInfo redplayer07 = new RoleInfo("红队", Color.red, "窃取 <color=#0000FFFF>蓝队</color> 旗帜", "窃取 <color=#0000FFFF>蓝队</color> 旗帜", RoleId.RedPlayer07);
+        public static RoleInfo blueplayer01 = new RoleInfo("蓝队", Color.blue, "窃取 <color=#FF0000FF>红队</color> 旗帜", "窃取 <color=#FF0000FF>红队</color> 旗帜", RoleId.BluePlayer01);
+        public static RoleInfo blueplayer02 = new RoleInfo("蓝队", Color.blue, "窃取 <color=#FF0000FF>红队</color> 旗帜", "窃取 <color=#FF0000FF>红队</color> 旗帜", RoleId.BluePlayer02);
+        public static RoleInfo blueplayer03 = new RoleInfo("蓝队", Color.blue, "窃取 <color=#FF0000FF>红队</color> 旗帜", "窃取 <color=#FF0000FF>红队</color> 旗帜", RoleId.BluePlayer03);
+        public static RoleInfo blueplayer04 = new RoleInfo("蓝队", Color.blue, "窃取 <color=#FF0000FF>红队</color> 旗帜", "窃取 <color=#FF0000FF>红队</color> 旗帜", RoleId.BluePlayer04);
+        public static RoleInfo blueplayer05 = new RoleInfo("蓝队", Color.blue, "窃取 <color=#FF0000FF>红队</color> 旗帜", "窃取 <color=#FF0000FF>红队</color> 旗帜", RoleId.BluePlayer05);
+        public static RoleInfo blueplayer06 = new RoleInfo("蓝队", Color.blue, "窃取 <color=#FF0000FF>红队</color> 旗帜", "窃取 <color=#FF0000FF>红队</color> 旗帜", RoleId.BluePlayer06);
+        public static RoleInfo blueplayer07 = new RoleInfo("蓝队", Color.blue, "窃取 <color=#FF0000FF>红队</color> 旗帜", "窃取 <color=#FF0000FF>红队</color> 旗帜", RoleId.BluePlayer07);
+        public static RoleInfo stealerplayer = new RoleInfo("盗旗者", Color.grey, "从玩家手中窃取旗帜以加入该团队", "从玩家手中窃取旗帜 \n以加入该团队", RoleId.StealerPlayer);
 
         // Police and Thief Teams
-        public static RoleInfo policeplayer01 = new RoleInfo("Police Officer", Color.cyan, "Capture all the <color=#D2B48CFF>Thiefs</color>", "Capture all the <color=#D2B48CFF>Thiefs</color>", RoleId.PolicePlayer01);
-        public static RoleInfo policeplayer02 = new RoleInfo("Police Officer", Color.cyan, "Capture all the <color=#D2B48CFF>Thiefs</color>", "Capture all the <color=#D2B48CFF>Thiefs</color>", RoleId.PolicePlayer02);
-        public static RoleInfo policeplayer03 = new RoleInfo("Police Officer", Color.cyan, "Capture all the <color=#D2B48CFF>Thiefs</color>", "Capture all the <color=#D2B48CFF>Thiefs</color>", RoleId.PolicePlayer03);
-        public static RoleInfo policeplayer04 = new RoleInfo("Police Officer", Color.cyan, "Capture all the <color=#D2B48CFF>Thiefs</color>", "Capture all the <color=#D2B48CFF>Thiefs</color>", RoleId.PolicePlayer04);
-        public static RoleInfo policeplayer05 = new RoleInfo("Police Officer", Color.cyan, "Capture all the <color=#D2B48CFF>Thiefs</color>", "Capture all the <color=#D2B48CFF>Thiefs</color>", RoleId.PolicePlayer05);
-        public static RoleInfo thiefplayer01 = new RoleInfo("Thief", Mechanic.color, "Steal all the jewels without getting captured", "Steal all the jewels \nwithout getting captured", RoleId.ThiefPlayer01);
-        public static RoleInfo thiefplayer02 = new RoleInfo("Thief", Mechanic.color, "Steal all the jewels without getting captured", "Steal all the jewels \nwithout getting captured", RoleId.ThiefPlayer02);
-        public static RoleInfo thiefplayer03 = new RoleInfo("Thief", Mechanic.color, "Steal all the jewels without getting captured", "Steal all the jewels \nwithout getting captured", RoleId.ThiefPlayer03);
-        public static RoleInfo thiefplayer04 = new RoleInfo("Thief", Mechanic.color, "Steal all the jewels without getting captured", "Steal all the jewels \nwithout getting captured", RoleId.ThiefPlayer04);
-        public static RoleInfo thiefplayer05 = new RoleInfo("Thief", Mechanic.color, "Steal all the jewels without getting captured", "Steal all the jewels \nwithout getting captured", RoleId.ThiefPlayer05);
-        public static RoleInfo thiefplayer06 = new RoleInfo("Thief", Mechanic.color, "Steal all the jewels without getting captured", "Steal all the jewels \nwithout getting captured", RoleId.ThiefPlayer06);
-        public static RoleInfo thiefplayer07 = new RoleInfo("Thief", Mechanic.color, "Steal all the jewels without getting captured", "Steal all the jewels \nwithout getting captured", RoleId.ThiefPlayer07);
-        public static RoleInfo thiefplayer08 = new RoleInfo("Thief", Mechanic.color, "Steal all the jewels without getting captured", "Steal all the jewels \nwithout getting captured", RoleId.ThiefPlayer08);
-        public static RoleInfo thiefplayer09 = new RoleInfo("Thief", Mechanic.color, "Steal all the jewels without getting captured", "Steal all the jewels \nwithout getting captured", RoleId.ThiefPlayer09);
-        public static RoleInfo thiefplayer10 = new RoleInfo("Thief", Mechanic.color, "Steal all the jewels without getting captured", "Steal all the jewels \nwithout getting captured", RoleId.ThiefPlayer10);
+        public static RoleInfo policeplayer01 = new RoleInfo("警察", Color.cyan, "逮捕所有 <color=#D2B48CFF>小偷</color>", "逮捕所有 <color=#D2B48CFF>小偷</color>", RoleId.PolicePlayer01);
+        public static RoleInfo policeplayer02 = new RoleInfo("警察", Color.cyan, "逮捕所有 <color=#D2B48CFF>小偷</color>", "逮捕所有 <color=#D2B48CFF>小偷</color>", RoleId.PolicePlayer02);
+        public static RoleInfo policeplayer03 = new RoleInfo("警察", Color.cyan, "逮捕所有 <color=#D2B48CFF>小偷</color>", "逮捕所有 <color=#D2B48CFF>小偷</color>", RoleId.PolicePlayer03);
+        public static RoleInfo policeplayer04 = new RoleInfo("警察", Color.cyan, "逮捕所有 <color=#D2B48CFF>小偷</color>", "逮捕所有 <color=#D2B48CFF>小偷</color>", RoleId.PolicePlayer04);
+        public static RoleInfo policeplayer05 = new RoleInfo("警察", Color.cyan, "逮捕所有 <color=#D2B48CFF>小偷</color>", "逮捕所有 <color=#D2B48CFF>小偷</color>", RoleId.PolicePlayer05);
+        public static RoleInfo thiefplayer01 = new RoleInfo("小偷", Mechanic.color, "偷走所有宝石不被逮捕", "偷走所有宝石不被逮捕", RoleId.ThiefPlayer01);
+        public static RoleInfo thiefplayer02 = new RoleInfo("小偷", Mechanic.color, "偷走所有宝石不被逮捕", "偷走所有宝石不被逮捕", RoleId.ThiefPlayer02);
+        public static RoleInfo thiefplayer03 = new RoleInfo("小偷", Mechanic.color, "偷走所有宝石不被逮捕", "偷走所有宝石不被逮捕", RoleId.ThiefPlayer03);
+        public static RoleInfo thiefplayer04 = new RoleInfo("小偷", Mechanic.color, "偷走所有宝石不被逮捕", "偷走所有宝石不被逮捕", RoleId.ThiefPlayer04);
+        public static RoleInfo thiefplayer05 = new RoleInfo("小偷", Mechanic.color, "偷走所有宝石不被逮捕", "偷走所有宝石不被逮捕", RoleId.ThiefPlayer05);
+        public static RoleInfo thiefplayer06 = new RoleInfo("小偷", Mechanic.color, "偷走所有宝石不被逮捕", "偷走所有宝石不被逮捕", RoleId.ThiefPlayer06);
+        public static RoleInfo thiefplayer07 = new RoleInfo("小偷", Mechanic.color, "偷走所有宝石不被逮捕", "偷走所有宝石不被逮捕", RoleId.ThiefPlayer07);
+        public static RoleInfo thiefplayer08 = new RoleInfo("小偷", Mechanic.color, "偷走所有宝石不被逮捕", "偷走所有宝石不被逮捕", RoleId.ThiefPlayer08);
+        public static RoleInfo thiefplayer09 = new RoleInfo("小偷", Mechanic.color, "偷走所有宝石不被逮捕", "偷走所有宝石不被逮捕", RoleId.ThiefPlayer09);
+        public static RoleInfo thiefplayer10 = new RoleInfo("小偷", Mechanic.color, "偷走所有宝石不被逮捕", "偷走所有宝石不被逮捕", RoleId.ThiefPlayer10);
 
         // King of the hill Teams
-        public static RoleInfo greenKing = new RoleInfo("Green King", Color.green, "Capture the zones", "Capture the zones", RoleId.GreenKing);
-        public static RoleInfo greenplayer01 = new RoleInfo("Green Team", Color.green, "Protect your King", "Protect your King", RoleId.GreenPlayer01);
-        public static RoleInfo greenplayer02 = new RoleInfo("Green Team", Color.green, "Protect your King", "Protect your King", RoleId.GreenPlayer02);
-        public static RoleInfo greenplayer03 = new RoleInfo("Green Team", Color.green, "Protect your King", "Protect your King", RoleId.GreenPlayer03);
-        public static RoleInfo greenplayer04 = new RoleInfo("Green Team", Color.green, "Protect your King", "Protect your King", RoleId.GreenPlayer04);
-        public static RoleInfo greenplayer05 = new RoleInfo("Green Team", Color.green, "Protect your King", "Protect your King", RoleId.GreenPlayer05);
-        public static RoleInfo greenplayer06 = new RoleInfo("Green Team", Color.green, "Protect your King", "Protect your King", RoleId.GreenPlayer06);
-        public static RoleInfo yellowKing = new RoleInfo("Yellow King", Color.yellow, "Capture the zones", "Capture the zones", RoleId.YellowKing);
-        public static RoleInfo yellowplayer01 = new RoleInfo("Yellow Team", Color.yellow, "Protect your King", "Protect your King", RoleId.YellowPlayer01);
-        public static RoleInfo yellowplayer02 = new RoleInfo("Yellow Team", Color.yellow, "Protect your King", "Protect your King", RoleId.YellowPlayer02);
-        public static RoleInfo yellowplayer03 = new RoleInfo("Yellow Team", Color.yellow, "Protect your King", "Protect your King", RoleId.YellowPlayer03);
-        public static RoleInfo yellowplayer04 = new RoleInfo("Yellow Team", Color.yellow, "Protect your King", "Protect your King", RoleId.YellowPlayer04);
-        public static RoleInfo yellowplayer05 = new RoleInfo("Yellow Team", Color.yellow, "Protect your King", "Protect your King", RoleId.YellowPlayer05);
-        public static RoleInfo yellowplayer06 = new RoleInfo("Yellow Team", Color.yellow, "Protect your King", "Protect your King", RoleId.YellowPlayer06);
-        public static RoleInfo usurperplayer = new RoleInfo("Usurper", Color.grey, "Kill a King to become one", "Kill a King to become one", RoleId.UsurperPlayer);
+        public static RoleInfo greenKing = new RoleInfo("绿队国王", Color.green, "占据领地", "占据领地", RoleId.GreenKing);
+        public static RoleInfo greenplayer01 = new RoleInfo("绿队", Color.green, "保护你的国王和领地", "保护你的国王和领地", RoleId.GreenPlayer01);
+        public static RoleInfo greenplayer02 = new RoleInfo("绿队", Color.green, "保护你的国王和领地", "保护你的国王和领地", RoleId.GreenPlayer02);
+        public static RoleInfo greenplayer03 = new RoleInfo("绿队", Color.green, "保护你的国王和领地", "保护你的国王和领地", RoleId.GreenPlayer03);
+        public static RoleInfo greenplayer04 = new RoleInfo("绿队", Color.green, "保护你的国王和领地", "保护你的国王和领地", RoleId.GreenPlayer04);
+        public static RoleInfo greenplayer05 = new RoleInfo("绿队", Color.green, "保护你的国王和领地", "保护你的国王和领地", RoleId.GreenPlayer05);
+        public static RoleInfo greenplayer06 = new RoleInfo("绿队", Color.green, "保护你的国王和领地", "保护你的国王和领地", RoleId.GreenPlayer06);
+        public static RoleInfo yellowKing = new RoleInfo("黄队国王", Color.yellow, "占据领地", "占据领地", RoleId.YellowKing);
+        public static RoleInfo yellowplayer01 = new RoleInfo("黄队", Color.yellow, "保护你的国王和领地", "保护你的国王和领地", RoleId.YellowPlayer01);
+        public static RoleInfo yellowplayer02 = new RoleInfo("黄队", Color.yellow, "保护你的国王和领地", "保护你的国王和领地", RoleId.YellowPlayer02);
+        public static RoleInfo yellowplayer03 = new RoleInfo("黄队", Color.yellow, "保护你的国王和领地", "保护你的国王和领地", RoleId.YellowPlayer03);
+        public static RoleInfo yellowplayer04 = new RoleInfo("黄队", Color.yellow, "保护你的国王和领地", "保护你的国王和领地", RoleId.YellowPlayer04);
+        public static RoleInfo yellowplayer05 = new RoleInfo("黄队", Color.yellow, "保护你的国王和领地", "保护你的国王和领地", RoleId.YellowPlayer05);
+        public static RoleInfo yellowplayer06 = new RoleInfo("黄队", Color.yellow, "保护你的国王和领地", "保护你的国王和领地", RoleId.YellowPlayer06);
+        public static RoleInfo usurperplayer = new RoleInfo("篡位者", Color.grey, "杀死国王并取代他", "杀死国王并取代他", RoleId.UsurperPlayer);
 
         // Hot Potato Teams
-        public static RoleInfo hotPotatoPlayer = new RoleInfo("Hot Potato", Color.grey, "Give the hot potato to other player", "Give the hot potato \nto other player", RoleId.HotPotato);
-        public static RoleInfo notPotato01 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato01);
-        public static RoleInfo notPotato02 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato02);
-        public static RoleInfo notPotato03 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato03);
-        public static RoleInfo notPotato04 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato04);
-        public static RoleInfo notPotato05 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato05);
-        public static RoleInfo notPotato06 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato06);
-        public static RoleInfo notPotato07 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato07);
-        public static RoleInfo notPotato08 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato08);
-        public static RoleInfo notPotato09 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato09);
-        public static RoleInfo notPotato10 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato10);
-        public static RoleInfo notPotato11 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato11);
-        public static RoleInfo notPotato12 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato12);
-        public static RoleInfo notPotato13 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato13);
-        public static RoleInfo notPotato14 = new RoleInfo("Cold Potato", Color.cyan, "Run from the Hot Potato", "Run from the Hot Potato", RoleId.NotPotato14);
-        public static RoleInfo explodedPotato01 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato01);
-        public static RoleInfo explodedPotato02 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato02);
-        public static RoleInfo explodedPotato03 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato03);
-        public static RoleInfo explodedPotato04 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato04);
-        public static RoleInfo explodedPotato05 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato05);
-        public static RoleInfo explodedPotato06 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato06);
-        public static RoleInfo explodedPotato07 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato07);
-        public static RoleInfo explodedPotato08 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato08);
-        public static RoleInfo explodedPotato09 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato09);
-        public static RoleInfo explodedPotato10 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato10);
-        public static RoleInfo explodedPotato11 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato11);
-        public static RoleInfo explodedPotato12 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato12);
-        public static RoleInfo explodedPotato13 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato13);
-        public static RoleInfo explodedPotato14 = new RoleInfo("Burnt Potato", Mechanic.color, "You are burnt", "You are burnt", RoleId.ExplodedPotato14);
+        public static RoleInfo hotPotatoPlayer = new RoleInfo("烫手山芋", Color.grey, "把烫手山芋丢给别人", "把烫手山芋丢给别人", RoleId.HotPotato);
+        public static RoleInfo notPotato01 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato01);
+        public static RoleInfo notPotato02 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato02);
+        public static RoleInfo notPotato03 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato03);
+        public static RoleInfo notPotato04 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato04);
+        public static RoleInfo notPotato05 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato05);
+        public static RoleInfo notPotato06 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato06);
+        public static RoleInfo notPotato07 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato07);
+        public static RoleInfo notPotato08 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato08);
+        public static RoleInfo notPotato09 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato09);
+        public static RoleInfo notPotato10 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato10);
+        public static RoleInfo notPotato11 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato11);
+        public static RoleInfo notPotato12 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato12);
+        public static RoleInfo notPotato13 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato13);
+        public static RoleInfo notPotato14 = new RoleInfo("冷山芋", Color.cyan, "逃离烫手山芋", "逃离烫手山芋", RoleId.NotPotato14);
+        public static RoleInfo explodedPotato01 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato01);
+        public static RoleInfo explodedPotato02 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato02);
+        public static RoleInfo explodedPotato03 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato03);
+        public static RoleInfo explodedPotato04 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato04);
+        public static RoleInfo explodedPotato05 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato05);
+        public static RoleInfo explodedPotato06 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato06);
+        public static RoleInfo explodedPotato07 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato07);
+        public static RoleInfo explodedPotato08 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato08);
+        public static RoleInfo explodedPotato09 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato09);
+        public static RoleInfo explodedPotato10 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato10);
+        public static RoleInfo explodedPotato11 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato11);
+        public static RoleInfo explodedPotato12 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato12);
+        public static RoleInfo explodedPotato13 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato13);
+        public static RoleInfo explodedPotato14 = new RoleInfo("烧焦的山芋", Mechanic.color, "你被烧糊了", "你被烧糊了", RoleId.ExplodedPotato14);
 
         // ZombieLaboratory Teams
-        public static RoleInfo nursePlayer = new RoleInfo("Nurse", Shy.color, "Heal survivors and create the cure", "Heal survivors and create the cure", RoleId.NursePlayer);
-        public static RoleInfo survivorPlayer01 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer01);
-        public static RoleInfo survivorPlayer02 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer02);
-        public static RoleInfo survivorPlayer03 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer03);
-        public static RoleInfo survivorPlayer04 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer04);
-        public static RoleInfo survivorPlayer05 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer05);
-        public static RoleInfo survivorPlayer06 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer06);
-        public static RoleInfo survivorPlayer07 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer07);
-        public static RoleInfo survivorPlayer08 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer08);
-        public static RoleInfo survivorPlayer09 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer09);
-        public static RoleInfo survivorPlayer10 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer10);
-        public static RoleInfo survivorPlayer11 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer11);
-        public static RoleInfo survivorPlayer12 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer12);
-        public static RoleInfo survivorPlayer13 = new RoleInfo("Survivor", Color.cyan, "Survive while looking for items to make the cure", "Survive while looking \nfor items to make the cure", RoleId.SurvivorPlayer13);
-        public static RoleInfo zombiePlayer01 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer01);
-        public static RoleInfo zombiePlayer02 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer02);
-        public static RoleInfo zombiePlayer03 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer03);
-        public static RoleInfo zombiePlayer04 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer04);
-        public static RoleInfo zombiePlayer05 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer05);
-        public static RoleInfo zombiePlayer06 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer06);
-        public static RoleInfo zombiePlayer07 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer07);
-        public static RoleInfo zombiePlayer08 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer08);
-        public static RoleInfo zombiePlayer09 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer09);
-        public static RoleInfo zombiePlayer10 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer10);
-        public static RoleInfo zombiePlayer11 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer11);
-        public static RoleInfo zombiePlayer12 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer12);
-        public static RoleInfo zombiePlayer13 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer13);
-        public static RoleInfo zombiePlayer14 = new RoleInfo("Zombie", Mechanic.color, "Infect all survivors", "Infect all survivors", RoleId.ZombiePlayer14);
+        public static RoleInfo nursePlayer = new RoleInfo("护士", Shy.color, "治愈幸存者并净化飞船以解决生化危机", "治愈幸存者并净化飞船以解决生化危机", RoleId.NursePlayer);
+        public static RoleInfo survivorPlayer01 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer01);
+        public static RoleInfo survivorPlayer02 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer02);
+        public static RoleInfo survivorPlayer03 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer03);
+        public static RoleInfo survivorPlayer04 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer04);
+        public static RoleInfo survivorPlayer05 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer05);
+        public static RoleInfo survivorPlayer06 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer06);
+        public static RoleInfo survivorPlayer07 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer07);
+        public static RoleInfo survivorPlayer08 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer08);
+        public static RoleInfo survivorPlayer09 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer09);
+        public static RoleInfo survivorPlayer10 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer10);
+        public static RoleInfo survivorPlayer11 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer11);
+        public static RoleInfo survivorPlayer12 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer12);
+        public static RoleInfo survivorPlayer13 = new RoleInfo("幸存者", Color.cyan, "在生化危机中活下去，并寻找用于净化飞船的关键道具", "在生化危机中活下去\n并寻找用于净化飞船的关键道具", RoleId.SurvivorPlayer13);
+        public static RoleInfo zombiePlayer01 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer01);
+        public static RoleInfo zombiePlayer02 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer02);
+        public static RoleInfo zombiePlayer03 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer03);
+        public static RoleInfo zombiePlayer04 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer04);
+        public static RoleInfo zombiePlayer05 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer05);
+        public static RoleInfo zombiePlayer06 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer06);
+        public static RoleInfo zombiePlayer07 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer07);
+        public static RoleInfo zombiePlayer08 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer08);
+        public static RoleInfo zombiePlayer09 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer09);
+        public static RoleInfo zombiePlayer10 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer10);
+        public static RoleInfo zombiePlayer11 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer11);
+        public static RoleInfo zombiePlayer12 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer12);
+        public static RoleInfo zombiePlayer13 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer13);
+        public static RoleInfo zombiePlayer14 = new RoleInfo("僵尸", Mechanic.color, "感染所有幸存者", "感染所有幸存者", RoleId.ZombiePlayer14);
         
         // Impostor roles
-        public static RoleInfo mimic = new RoleInfo("Mimic", Mimic.color, "Mimic other player's look", "Mimic other player's look", RoleId.Mimic);
-        public static RoleInfo painter = new RoleInfo("Painter", Painter.color, "Paint players with the same color", "Paint players with the same color", RoleId.Painter);
-        public static RoleInfo demon = new RoleInfo("Demon", Demon.color, "Bite players to delay their death", "Bite players to delay their death", RoleId.Demon);
-        public static RoleInfo janitor = new RoleInfo("Janitor", Janitor.color, "Remove and move bodies from the crime scene", "Remove and move bodies from the crime scene", RoleId.Janitor);
-        public static RoleInfo illusionist = new RoleInfo("Illusionist", Illusionist.color, "Create your own vent network and turn off the lights", "Create your own vent network \nand turn off the lights", RoleId.Illusionist);
-        public static RoleInfo manipulator = new RoleInfo("Manipulator", Manipulator.color, "Manipulate a player to kill his adjacent", "Manipulate a player to kill his adjacent", RoleId.Manipulator);
-        public static RoleInfo bomberman = new RoleInfo("Bomberman", Bomberman.color, "Sabotage by putting bombs", "Sabotage by putting bombs", RoleId.Bomberman);
-        public static RoleInfo chameleon = new RoleInfo("Chameleon", Chameleon.color, "Make yourself invisible", "Make yourself invisible", RoleId.Chameleon);
-        public static RoleInfo gambler = new RoleInfo("Gambler", Gambler.color, "Shoot a player choosing their role during the meeting", "Shoot a player choosing \ntheir role during the meeting", RoleId.Gambler);
-        public static RoleInfo sorcerer = new RoleInfo("Sorcerer", Sorcerer.color, "Casts spells on players", "Casts spells on players", RoleId.Sorcerer);
-        public static RoleInfo medusa = new RoleInfo("Medusa", Medusa.color, "Petrify players", "Petrify players", RoleId.Medusa);
-        public static RoleInfo hypnotist = new RoleInfo("Hypnotist", Hypnotist.color, "Invert player movement controls", "Invert player movement controls", RoleId.Hypnotist);
-        public static RoleInfo archer = new RoleInfo("Archer", Archer.color, "Make range kills", "Make range kills", RoleId.Archer);
+        public static RoleInfo mimic = new RoleInfo("化形者", Mimic.color, "化形成其他玩家", "化形成其他玩家", RoleId.Mimic);
+        public static RoleInfo painter = new RoleInfo("隐蔽者", Painter.color, "将玩家都变成相同的颜色", "将玩家都变成相同的颜色", RoleId.Painter);
+        public static RoleInfo demon = new RoleInfo("吸血鬼", Demon.color, "叮咬船员让他们慢慢死去", "叮咬船员让他们慢慢死去", RoleId.Demon);
+        public static RoleInfo janitor = new RoleInfo("清理者", Janitor.color, "将尸体带离犯罪现场", "将尸体带离犯罪现场", RoleId.Janitor);
+        public static RoleInfo illusionist = new RoleInfo("骗术师", Illusionist.color, "建立自己的通道网络并关闭灯光", "建立自己的通道网络并关闭灯光", RoleId.Illusionist);
+        public static RoleInfo manipulator = new RoleInfo("术士", Manipulator.color, "操控玩家杀死他附近的人", "操控玩家杀死他附近的人", RoleId.Manipulator);
+        public static RoleInfo bomberman = new RoleInfo("爆破者", Bomberman.color, "通过放置炸弹进行破坏", "通过放置炸弹进行破坏", RoleId.Bomberman);
+        public static RoleInfo chameleon = new RoleInfo("隐身人", Chameleon.color, "让自己隐身", "让自己隐身", RoleId.Chameleon);
+        public static RoleInfo gambler = new RoleInfo("赌怪", Gambler.color, "会议期间猜测其他玩家身份将其狙杀", "会议期间猜测其他玩家身份将其狙杀", RoleId.Gambler);
+        public static RoleInfo sorcerer = new RoleInfo("女巫", Sorcerer.color, "给其他玩家下咒", "给其他玩家下咒", RoleId.Sorcerer);
+        public static RoleInfo medusa = new RoleInfo("美杜莎", Medusa.color, "石化其他玩家，杀死所有敌人", "石化其他玩家，杀死所有敌人", RoleId.Medusa);
+        public static RoleInfo hypnotist = new RoleInfo("催眠师", Hypnotist.color, "颠倒玩家的移动控制", "颠倒玩家的移动控制", RoleId.Hypnotist);
+        public static RoleInfo archer = new RoleInfo("弓箭手", Archer.color, "可以进行远距离击杀", "可以进行远距离击杀", RoleId.Archer);
 
         // Rebelde roles
-        public static RoleInfo renegade = new RoleInfo("Renegade", Renegade.color, "Recruit a Minion and kill everyone", "Recruit a Minion and kill everyone", RoleId.Renegade, false, true);
-        public static RoleInfo minion = new RoleInfo("Minion", Minion.color, "Help the Renegade killing everyone", "Help the Renegade killing everyone", RoleId.Minion, false, true);
-        public static RoleInfo bountyHunter = new RoleInfo("Bounty Hunter", BountyHunter.color, "Hunt down your target" + BountyHunter.rolName, "Hunt down your target" + BountyHunter.rolName, RoleId.BountyHunter, false, true);
-        public static RoleInfo trapper = new RoleInfo("Trapper", Trapper.color, "Place landmines and root traps", "Place landmines and root traps", RoleId.Trapper, false, true);
-        public static RoleInfo yinyanger = new RoleInfo("Yinyanger", Yinyanger.color, "Mark two players to die if they collide", "Mark two players to die if they collide", RoleId.Yinyanger, false, true);
-        public static RoleInfo challenger = new RoleInfo("Challenger", Challenger.color, "Challenge a player to a rock-paper-scissors duel", "Challenge a player to \na rock-paper-scissors duel", RoleId.Challenger, false, true);
-        public static RoleInfo ninja = new RoleInfo("Ninja", Ninja.color, "Mark and make double kills", "Mark and make double kills", RoleId.Ninja, false, true);
-        public static RoleInfo berserker = new RoleInfo("Berserker", Berserker.color, "You can't stop killing", "You can't stop killing", RoleId.Berserker, false, true);
+        public static RoleInfo renegade = new RoleInfo("变节者", Renegade.color, "招募一名爪牙并杀死所有人", "招募一名爪牙并杀死所有人", RoleId.Renegade, false, true);
+        public static RoleInfo minion = new RoleInfo("爪牙", Minion.color, "帮助变节者杀死所有人", "帮助变节者杀死所有人", RoleId.Minion, false, true);
+        public static RoleInfo bountyHunter = new RoleInfo("赏金猎人", BountyHunter.color, "猎杀你的目标" + BountyHunter.rolName, "猎杀你的目标" + BountyHunter.rolName, RoleId.BountyHunter, false, true);
+        public static RoleInfo trapper = new RoleInfo("陷阱师", Trapper.color, "在地图上放置地雷和捕兽夹", "在地图上放置地雷和捕兽夹", RoleId.Trapper, false, true);
+        public static RoleInfo yinyanger = new RoleInfo("阴阳师", Yinyanger.color, "标记两名玩家使其相遇时死亡", "标记两名玩家使其相遇时死亡", RoleId.Yinyanger, false, true);
+        public static RoleInfo challenger = new RoleInfo("挑战者", Challenger.color, "用剪刀石头布和其他玩家决斗", "用剪刀石头布和其他玩家决斗", RoleId.Challenger, false, true);
+        public static RoleInfo ninja = new RoleInfo("忍者", Ninja.color, "标记并进行双杀", "标记并进行双杀", RoleId.Ninja, false, true);
+        public static RoleInfo berserker = new RoleInfo("嗜血杀手", Berserker.color, "你无法停止杀戮", "你无法停止杀戮", RoleId.Berserker, false, true);
 
         // Neutral roles
-        public static RoleInfo joker = new RoleInfo("Joker", Joker.color, "Get voted out to win", "Get voted out to win \nOpen the map to activate the sabotage button", RoleId.Joker, true, false);
-        public static RoleInfo rolethief = new RoleInfo("Role Thief", RoleThief.color, "Steal other player role", "Steal other player role", RoleId.RoleThief, true, false);
-        public static RoleInfo pyromaniac = new RoleInfo("Pyromaniac", Pyromaniac.color, "Ignite all survivors to win", "Ignite all survivors to win", RoleId.Pyromaniac, true, false);
-        public static RoleInfo treasureHunter = new RoleInfo("Treasure Hunter", TreasureHunter.color, "Find treasures to win", "Find treasures to win", RoleId.TreasureHunter, true, false);
-        public static RoleInfo devourer = new RoleInfo("Devourer", Devourer.color, "Devour bodies to win", "Devour bodies to win", RoleId.Devourer, true, false);
-        public static RoleInfo poisoner = new RoleInfo("Poisoner", Poisoner.color, "Poison all player", "Poison all player \nOpen the map to activate the sabotage button", RoleId.Poisoner, true, false);
-        public static RoleInfo puppeteer = new RoleInfo("Puppeteer", Puppeteer.color, "Make dummies and get them killed", "Make dummies and get them killed", RoleId.Puppeteer, true, false);
+        public static RoleInfo joker = new RoleInfo("小丑", Joker.color, "让自己被投出去", "让自己被投出去来取得胜利 \n打开地图激活破坏能力", RoleId.Joker, true, false);
+        public static RoleInfo rolethief = new RoleInfo("身份窃贼", RoleThief.color, "窃取其他玩家的身份", "窃取其他玩家的身份", RoleId.RoleThief, true, false);
+        public static RoleInfo pyromaniac = new RoleInfo("纵火犯", Pyromaniac.color, "点燃幸存者获得胜利", "点燃幸存者获得胜利", RoleId.Pyromaniac, true, false);
+        public static RoleInfo treasureHunter = new RoleInfo("寻宝猎人", TreasureHunter.color, "寻找宝藏获得胜利", "寻找宝藏获得胜利", RoleId.TreasureHunter, true, false);
+        public static RoleInfo devourer = new RoleInfo("秃鹫", Devourer.color, "吞噬尸体以获得胜利", "吞噬尸体以获得胜利", RoleId.Devourer, true, false);
+        public static RoleInfo poisoner = new RoleInfo("疫医", Poisoner.color, "下毒并感染所有玩家", "下毒并感染所有玩家 \n打开地图激活破坏按钮", RoleId.Poisoner, true, false);
+        public static RoleInfo puppeteer = new RoleInfo("傀儡师", Puppeteer.color, "制造并设法杀死假人", "制造并设法杀死假人", RoleId.Puppeteer, true, false);
 
         // Crewmate roles
-        public static RoleInfo captain = new RoleInfo("Captain", Captain.color, "Your vote counts twice", "Your vote counts twice", RoleId.Captain);
-        public static RoleInfo mechanic = new RoleInfo("Mechanic", Mechanic.color, "Repair sabotages on the ship", "Repair sabotages on the ship", RoleId.Mechanic);
-        public static RoleInfo sheriff = new RoleInfo("Sheriff", Sheriff.color, "Kill the <color=#FF0000FF>Impostors</color>", "Kill the <color=#FF0000FF>Impostors</color>", RoleId.Sheriff);
-        public static RoleInfo detective = new RoleInfo("Detective", Detective.color, "Examine footprints", "Examine footprints", RoleId.Detective);
-        public static RoleInfo forensic = new RoleInfo("Forensic", Forensic.color, "Find clues reporting bodies and asking their ghosts", "Find clues reporting bodies \nand asking their ghosts", RoleId.Forensic);
-        public static RoleInfo timeTraveler = new RoleInfo("Time Traveler", TimeTraveler.color, "Rewind the time", "Rewind the time", RoleId.TimeTraveler);
-        public static RoleInfo squire = new RoleInfo("Squire", Squire.color, "Protect a player with your shield", "Protect a player with your shield", RoleId.Squire);
-        public static RoleInfo cheater = new RoleInfo("Cheater", Cheater.color, "Swap the votes of two players", "Swap the votes of two players", RoleId.Cheater);
-        public static RoleInfo fortuneTeller = new RoleInfo("Fortune Teller", FortuneTeller.color, "Reveal who are the <color=#FF0000FF>Impostors</color>", "Reveal who are the <color=#FF0000FF>Impostors</color>", RoleId.FortuneTeller);
-        public static RoleInfo hacker = new RoleInfo("Hacker", Hacker.color, "Use Admin and Vitals from anywhere", "Use Admin and Vitals from anywhere", RoleId.Hacker);
-        public static RoleInfo sleuth = new RoleInfo("Sleuth", Sleuth.color, "Track down a player and corpses", "Track down a player and corpses", RoleId.Sleuth);
-        public static RoleInfo fink = new RoleInfo("Fink", Fink.color, "Finish your tasks to reveal the <color=#FF0000FF>Impostors</color>", "Finish your tasks to reveal the <color=#FF0000FF>Impostors</color>", RoleId.Fink);
-        public static RoleInfo kid = new RoleInfo("Kid", Kid.color, "Everyone lose if you die or get voted out", "Everyone lose if you die or get voted out", RoleId.Kid);
-        public static RoleInfo welder = new RoleInfo("Welder", Welder.color, "Seal vents", "Seal vents", RoleId.Welder);
-        public static RoleInfo spiritualist = new RoleInfo("Spiritualist", Spiritualist.color, "Sacrifice yourself to revive a player", "Sacrifice yourself to revive a player", RoleId.Spiritualist);
-        public static RoleInfo coward = new RoleInfo("Coward", Coward.color, "Call meetings from anywhere", "Call meetings from anywhere", RoleId.Coward);
-        public static RoleInfo vigilant = new RoleInfo("Vigilant", Vigilant.color, "Put additional cameras on the map", "Put additional cameras on the map", RoleId.Vigilant);
-        public static RoleInfo vigilantMira = new RoleInfo("Vigilant", Vigilant.color, "Activate remote Doorlog with Q key", "Activate remote Doorlog with Q key", RoleId.VigilantMira);
-        public static RoleInfo hunter = new RoleInfo("Hunter", Hunter.color, "Mark a player to die if you get killed", "Mark a player to die if you get killed", RoleId.Hunter);
-        public static RoleInfo jinx = new RoleInfo("Jinx", Jinx.color, "Jinx players abilities", "Jinx players abilities", RoleId.Jinx);
-        public static RoleInfo bat = new RoleInfo("Bat", Bat.color, "Reduce buttons cooldown and increase impostor ones", "Reduce buttons cooldown \nand increase impostor ones", RoleId.Bat);
-        public static RoleInfo necromancer = new RoleInfo("Necromancer", Necromancer.color, "Take a body to its room and revive it", "Take a body to its room and revive it", RoleId.Necromancer);
-        public static RoleInfo engineer = new RoleInfo("Engineer", Engineer.color, "Place speed and position traps", "Place speed and position traps \nSwitch trap type with Q key", RoleId.Engineer);
-        public static RoleInfo shy = new RoleInfo("Shy", Shy.color, "Check close players", "Check close players", RoleId.Shy);
-        public static RoleInfo impostor = new RoleInfo("Impostor", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "Sabotage and kill everyone"), "Sabotage and kill everyone", RoleId.Impostor);
-        public static RoleInfo crewmate = new RoleInfo("Crewmate", Kid.color, "Find and exile the <color=#FF0000FF>Impostors</color>", "Find and exile the <color=#FF0000FF>Impostors</color>", RoleId.Crewmate);
-        public static RoleInfo lighter = new RoleInfo("Lighter", Modifiers.color, "You have more vision", "You have more vision", RoleId.Lighter);
-        public static RoleInfo blind = new RoleInfo("Blind", Modifiers.color, "You have less vision", "You have less vision", RoleId.Blind);
-        public static RoleInfo flash = new RoleInfo("Flash", Modifiers.color, "You're faster", "You're faster", RoleId.Flash);
-        public static RoleInfo bigchungus = new RoleInfo("Big Chungus", Modifiers.color, "You're bigger and slower", "You're bigger and slower", RoleId.BigChungus);
-        public static RoleInfo theChosenOne = new RoleInfo("The Chosen One", Modifiers.color, "Your killer will report your body", "Your killer will report your body", RoleId.TheChosenOne);
-        public static RoleInfo performer = new RoleInfo("Performer", Modifiers.color, "Your death will trigger an alarm and reveal where your body is", "Your death will trigger an alarm \nand reveal where your body is", RoleId.Performer);
-        public static RoleInfo pro = new RoleInfo("Pro", Modifiers.color, "Your movement controls are inverted", "Your movement controls are inverted", RoleId.Pro);
-        public static RoleInfo lover = new RoleInfo("Lover", Modifiers.loverscolor, $"♥Survive as a couple with your partner♥", $"♥Survive as a couple with your partner♥", RoleId.Lover);
-        public static RoleInfo badlover = new RoleInfo("Loverstor", Palette.ImpostorRed, $"<color=#FF00D1FF>♥Survive as a couple with your partner♥. </color><color=#FF1919FF>Kill the rest</color>", $"<color=#FF00D1FF>♥Survive as a couple with your partner♥. \n</color><color=#FF1919FF>Kill the rest</color>", RoleId.Lover);
+        public static RoleInfo captain = new RoleInfo("舰长", Captain.color, "你的投票计为两票", "你的投票计为两票", RoleId.Captain);
+        public static RoleInfo mechanic = new RoleInfo("工程师", Mechanic.color, "修理被破坏的飞船", "修理被破坏的飞船", RoleId.Mechanic);
+        public static RoleInfo sheriff = new RoleInfo("警长", Sheriff.color, "杀死 <color=#FF0000FF>伪装者</color>", "杀死 <color=#FF0000FF>伪装者</color>", RoleId.Sheriff);
+        public static RoleInfo detective = new RoleInfo("侦探", Detective.color, "调查脚印", "调查脚印", RoleId.Detective);
+        public static RoleInfo forensic = new RoleInfo("法医", Forensic.color, "通过报告尸体及询问灵魂获得线索", "通过报告尸体及询问灵魂获得线索", RoleId.Forensic);
+        public static RoleInfo timeTraveler = new RoleInfo("时间之主", TimeTraveler.color, "回溯时间", "回溯时间", RoleId.TimeTraveler);
+        public static RoleInfo squire = new RoleInfo("医生", Squire.color, "使用你的盾牌保护一名玩家", "使用你的盾牌保护一名玩家", RoleId.Squire);
+        public static RoleInfo cheater = new RoleInfo("换票师", Cheater.color, "交换两名玩家的选票", "交换两名玩家的选票", RoleId.Cheater);
+        public static RoleInfo fortuneTeller = new RoleInfo("预言家", FortuneTeller.color, "揭露谁是 <color=#FF0000FF>伪装者</color>", "揭露谁是 <color=#FF0000FF>伪装者</color>", RoleId.FortuneTeller);
+        public static RoleInfo hacker = new RoleInfo("黑客", Hacker.color, "可以在任何地方使用管理员权限与生命监测装置", "可以在任何地方\n使用管理员权限与生命监测装置", RoleId.Hacker);
+        public static RoleInfo sleuth = new RoleInfo("追踪者", Sleuth.color, "追踪玩家和尸体", "追踪玩家和尸体", RoleId.Sleuth);
+        public static RoleInfo fink = new RoleInfo("告密者", Fink.color, "完成你的任务来找到 <color=#FF0000FF>伪装者</color>", "完成你的任务来找到 <color=#FF0000FF>伪装者</color>", RoleId.Fink);
+        public static RoleInfo kid = new RoleInfo("小孩", Kid.color, "如果你死了或被驱逐所有人都将失败", "如果你死了或被驱逐所有人都将失败", RoleId.Kid);
+        public static RoleInfo welder = new RoleInfo("焊工", Welder.color, "焊死通风口", "焊死通风口", RoleId.Welder);
+        public static RoleInfo spiritualist = new RoleInfo("殉道者", Spiritualist.color, "牺牲自己复活其他玩家", "牺牲自己复活其他玩家", RoleId.Spiritualist);
+        public static RoleInfo coward = new RoleInfo("怯懦者", Coward.color, "远程召开紧急会议", "远程召开紧急会议", RoleId.Coward);
+        public static RoleInfo vigilant = new RoleInfo("哨兵", Vigilant.color, "在地图上放置额外的摄像头", "在地图上放置额外的摄像头", RoleId.Vigilant);
+        public static RoleInfo vigilantMira = new RoleInfo("哨兵", Vigilant.color, "按Q键可以远程开门", "按Q键可以远程开门", RoleId.VigilantMira);
+        public static RoleInfo hunter = new RoleInfo("猎人", Hunter.color, "标记一名玩家在自己死亡时陪葬", "标记一名玩家在自己死亡时陪葬", RoleId.Hunter);
+        public static RoleInfo jinx = new RoleInfo("扫把星", Jinx.color, "给其他玩家传递厄运，无效一次技能", "给其他玩家传递厄运\n无效一次技能", RoleId.Jinx);
+        public static RoleInfo bat = new RoleInfo("蝙蝠侠", Bat.color, "加速船员阵营技能冷却时间，减缓伪装者技能冷却时间", "加速船员阵营技能冷却时间\n减缓伪装者技能冷却时间", RoleId.Bat);
+        public static RoleInfo necromancer = new RoleInfo("死灵法师", Necromancer.color, "把尸体带到其它的房间并复活", "把尸体带到其它的房间并复活", RoleId.Necromancer);
+        public static RoleInfo engineer = new RoleInfo("机关师", Engineer.color, "设置速度变换和位置显示陷阱", "设置速度变换和位置显示陷阱\n按Q切换陷阱类型", RoleId.Engineer);
+        public static RoleInfo shy = new RoleInfo("内敛者", Shy.color, "检查靠近的玩家", "检查靠近的玩家", RoleId.Shy);
+        public static RoleInfo impostor = new RoleInfo("伪装者", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "破坏并杀死所有人"), "破坏并杀死所有人", RoleId.Impostor);
+        public static RoleInfo crewmate = new RoleInfo("船员", Kid.color, "找出并放逐 <color=#FF0000FF>伪装者</color>", "找出并放逐 <color=#FF0000FF>伪装者</color>", RoleId.Crewmate);
+        public static RoleInfo lighter = new RoleInfo("执灯人", Modifiers.color, "你的视野更加开阔", "你的视野更加开阔", RoleId.Lighter);
+        public static RoleInfo blind = new RoleInfo("失明者", Modifiers.color, "你的视野更加狭窄", "你的视野更加狭窄", RoleId.Blind);
+        public static RoleInfo flash = new RoleInfo("闪电侠", Modifiers.color, "你拥有风驰电掣的速度", "你拥有风驰电掣的速度", RoleId.Flash);
+        public static RoleInfo bigchungus = new RoleInfo("巨人", Modifiers.color, "你太胖了跑不动", "你太胖了跑不动", RoleId.BigChungus);
+        public static RoleInfo theChosenOne = new RoleInfo("诱饵", Modifiers.color, "杀死你的凶手会被迫报告", "杀死你的凶手会被迫报告", RoleId.TheChosenOne);
+        public static RoleInfo performer = new RoleInfo("广播员", Modifiers.color, "你的死亡会触发警报", "你的死亡会触发警报\n并告知你所在的位置", RoleId.Performer);
+        public static RoleInfo pro = new RoleInfo("醉鬼", Modifiers.color, "你的行动控制是颠倒的", "你的行动控制是颠倒的", RoleId.Pro);
+        public static RoleInfo lover = new RoleInfo("恋人", Modifiers.loverscolor, $"♥与你的恋人一起存活下去♥", $"♥与你的恋人一起存活下去♥", RoleId.Lover);
+        public static RoleInfo badlover = new RoleInfo("伪装者恋人", Palette.ImpostorRed, $"<color=#FF00D1FF>♥与你的恋人一起存活♥. </color><color=#FF1919FF>杀死其他人</color>", $"<color=#FF00D1FF>♥与你的恋人一起存活♥. \n</color><color=#FF1919FF>杀死其他人</color>", RoleId.Lover);
 
 
         public static List<RoleInfo> allRoleInfos = new List<RoleInfo>() {
@@ -579,7 +579,7 @@ namespace LasMonjas
         public static String GetRolesString(PlayerControl p, bool useColors) {
             string roleName;
             roleName = String.Join(" ", getRoleInfoForPlayer(p).Select(x => useColors ? Helpers.cs(x.color, x.name) : x.name).ToArray());
-            if (roleName.Contains("Lover")) roleName.Replace("Lover", "");
+            if (roleName.Contains("恋人")) roleName.Replace("恋人", "");
             return roleName;
         }
 
@@ -601,248 +601,248 @@ namespace LasMonjas
                 Color color = Color.white;
 
                 if (Captain.captain != null && p == Captain.captain) {
-                    name = "Captain";
+                    name = "舰长";
                     color = Captain.color;
                 }
                 else if (Mechanic.mechanic != null && p == Mechanic.mechanic) {
-                    name = "Mechanic";
+                    name = "工程师";
                     color = Mechanic.color;
                 }
                 else if (Sheriff.sheriff != null && p == Sheriff.sheriff) {
-                    name = "Sheriff";
+                    name = "警长";
                     color = Sheriff.color;
                 }
                 else if (Detective.detective != null && p == Detective.detective) {
-                    name = "Detective";
+                    name = "侦探";
                     color = Detective.color;
                 }
                 else if (Forensic.forensic != null && p == Forensic.forensic) {
-                    name = "Forensic";
+                    name = "法医";
                     color = Forensic.color;
                 }
                 else if (TimeTraveler.timeTraveler != null && p == TimeTraveler.timeTraveler) {
-                    name = "Time Traveler";
+                    name = "时间之主";
                     color = TimeTraveler.color;
                 }
                 else if (Squire.squire != null && p == Squire.squire) {
-                    name = "Squire";
+                    name = "医生";
                     color = Squire.color;
                 }
                 else if (Cheater.cheater != null && p == Cheater.cheater) {
-                    name = "Cheater";
+                    name = "换票师";
                     color = Cheater.color;
                 }
                 else if (FortuneTeller.fortuneTeller != null && p == FortuneTeller.fortuneTeller) {
-                    name = "Fortune Teller";
+                    name = "预言家";
                     color = FortuneTeller.color;
                 }
                 else if (Hacker.hacker != null && p == Hacker.hacker) {
-                    name = "Hacker";
+                    name = "黑客";
                     color = Hacker.color;
                 }
                 else if (Sleuth.sleuth != null && p == Sleuth.sleuth) {
-                    name = "Sleuth";
+                    name = "追踪者";
                     color = Sleuth.color;
                 }
                 else if (Fink.fink != null && p == Fink.fink) {
-                    name = "Fink";
+                    name = "告密者";
                     color = Fink.color;
                 }
                 else if (Kid.kid != null && p == Kid.kid) {
-                    name = "Kid";
+                    name = "小孩";
                     color = Kid.color;
                 }
                 else if (Welder.welder != null && p == Welder.welder) {
-                    name = "Welder";
+                    name = "焊工";
                     color = Welder.color;
                 }
                 else if (Spiritualist.spiritualist != null && p == Spiritualist.spiritualist) {
-                    name = "Spiritualist";
+                    name = "殉道者";
                     color = Spiritualist.color;
                 }
                 else if (Coward.coward != null && p == Coward.coward) {
-                    name = "Coward";
+                    name = "怯懦者";
                     color = Coward.color;
                 }
                 else if (Vigilant.vigilant != null && p == Vigilant.vigilant) {
-                    name = "Vigilant";
+                    name = "哨兵";
                     color = Vigilant.color;
                 }
                 else if (Vigilant.vigilantMira != null && p == Vigilant.vigilantMira) {
-                    name = "Vigilant";
+                    name = "哨兵";
                     color = Vigilant.color;
                 }
                 else if (Hunter.hunter != null && p == Hunter.hunter) {
-                    name = "Hunter";
+                    name = "猎人";
                     color = Hunter.color;
                 }
                 else if (Jinx.jinx != null && p == Jinx.jinx) {
-                    name = "Jinx";
+                    name = "扫把星";
                     color = Jinx.color;
                 }
                 else if (Bat.bat != null && p == Bat.bat) {
-                    name = "Bat";
+                    name = "蝙蝠侠";
                     color = Bat.color;
                 }
                 else if (Necromancer.necromancer != null && p == Necromancer.necromancer) {
-                    name = "Necromancer";
+                    name = "死灵法师";
                     color = Necromancer.color;
                 }
                 else if (Engineer.engineer != null && p == Engineer.engineer) {
-                    name = "Engineer";
+                    name = "机关师";
                     color = Engineer.color;
                 }
                 else if (Shy.shy != null && p == Shy.shy) {
-                    name = "Shy";
+                    name = "内敛者";
                     color = Shy.color;
                 }
                 else if (Mimic.mimic != null && p == Mimic.mimic) {
-                    name = "Mimic";
+                    name = "化形者";
                     color = Mimic.color;
                     isGood = false;
                 }
                 else if (Painter.painter != null && p == Painter.painter) {
-                    name = "Painter";
+                    name = "隐蔽者";
                     color = Painter.color;
                     isGood = false;
                 }
                 else if (Demon.demon != null && p == Demon.demon) {
-                    name = "Demon";
+                    name = "吸血鬼";
                     color = Demon.color;
                     isGood = false;
                 }
                 else if (Illusionist.illusionist != null && p == Illusionist.illusionist) {
-                    name = "Illusionist";
+                    name = "骗术师";
                     color = Illusionist.color;
                     isGood = false;
                 }
                 else if (Janitor.janitor != null && p == Janitor.janitor) {
-                    name = "Janitor";
+                    name = "清理者";
                     color = Janitor.color;
                     isGood = false;
                 }
                 else if (Manipulator.manipulator != null && p == Manipulator.manipulator) {
-                    name = "Manipulator";
+                    name = "术士";
                     color = Manipulator.color;
                     isGood = false;
                 }
                 else if (Bomberman.bomberman != null && p == Bomberman.bomberman) {
-                    name = "Bomberman";
+                    name = "爆破者";
                     color = Bomberman.color;
                     isGood = false;
                 }
                 else if (Chameleon.chameleon != null && p == Chameleon.chameleon) {
-                    name = "Chameleon";
+                    name = "隐身人";
                     color = Palette.ImpostorRed;
                     isGood = false;
                 }
                 else if (Gambler.gambler != null && p == Gambler.gambler) {
-                    name = "Gambler";
+                    name = "赌怪";
                     color = Palette.ImpostorRed;
                     isGood = false;
                 }
                 else if (Sorcerer.sorcerer != null && p == Sorcerer.sorcerer) {
-                    name = "Sorcerer";
+                    name = "女巫";
                     color = Palette.ImpostorRed;
                     isGood = false;
                 }
                 else if (Medusa.medusa != null && p == Medusa.medusa) {
-                    name = "Medusa";
+                    name = "美杜莎";
                     color = Medusa.color;
                     isGood = false;
                 }
                 else if (Hypnotist.hypnotist != null && p == Hypnotist.hypnotist) {
-                    name = "Hypnotist";
+                    name = "催眠师";
                     color = Palette.ImpostorRed;
                     isGood = false;
                 }
                 else if (Archer.archer != null && p == Archer.archer) {
-                    name = "Archer";
+                    name = "弓箭手";
                     color = Palette.ImpostorRed;
                     isGood = false;
                 }               
                 else if (Renegade.renegade != null && p == Renegade.renegade) {
-                    name = "Renegade";
+                    name = "变节者";
                     color = Renegade.color;
                     isGood = false;
                 }
                 else if (Minion.minion != null && p == Minion.minion) {
-                    name = "Minion";
+                    name = "爪牙";
                     color = Minion.color;
                     isGood = false;
                 }
                 else if (BountyHunter.bountyhunter != null && p == BountyHunter.bountyhunter) {
-                    name = "Bounty Hunter";
+                    name = "赏金猎人";
                     color = BountyHunter.color;
                     isGood = false;
                 }
                 else if (Trapper.trapper != null && p == Trapper.trapper) {
-                    name = "Trapper";
+                    name = "陷阱师";
                     color = Trapper.color;
                     isGood = false;
                 }
                 else if (Yinyanger.yinyanger != null && p == Yinyanger.yinyanger) {
-                    name = "Yinyanger";
+                    name = "阴阳师";
                     color = Yinyanger.color;
                     isGood = false;
                 }
                 else if (Challenger.challenger != null && p == Challenger.challenger) {
-                    name = "Challenger";
+                    name = "挑战者";
                     color = Challenger.color;
                     isGood = false;
                 }
                 else if (Ninja.ninja != null && p == Ninja.ninja) {
-                    name = "Ninja";
+                    name = "忍者";
                     color = Ninja.color;
                     isGood = false;
                 }
                 else if (Berserker.berserker != null && p == Berserker.berserker) {
-                    name = "Berserker";
+                    name = "嗜血杀手";
                     color = Berserker.color;
                     isGood = false;
                 }
                 else if (Joker.joker != null && p == Joker.joker) {
-                    name = "Joker";
+                    name = "小丑";
                     color = Joker.color;
                     isGood = false;
                 }
                 else if (RoleThief.rolethief != null && p == RoleThief.rolethief) {
-                    name = "Role Thief";
+                    name = "身份窃贼";
                     color = RoleThief.color;
                     isGood = false;
                 }
                 else if (Pyromaniac.pyromaniac != null && p == Pyromaniac.pyromaniac) {
-                    name = "Pyromaniac";
+                    name = "纵火犯";
                     color = Pyromaniac.color;
                     isGood = false;
                 }
                 else if (TreasureHunter.treasureHunter != null && p == TreasureHunter.treasureHunter) {
-                    name = "Treasure Hunter";
+                    name = "寻宝猎人";
                     color = TreasureHunter.color;
                     isGood = false;
                 }
                 else if (Devourer.devourer != null && p == Devourer.devourer) {
-                    name = "Devourer";
+                    name = "秃鹫";
                     color = Devourer.color;
                     isGood = false;
                 }
                 else if (Poisoner.poisoner != null && p == Poisoner.poisoner) {
-                    name = "Poisoner";
+                    name = "疫医";
                     color = Poisoner.color;
                     isGood = false;
                 }
                 else if (Puppeteer.puppeteer != null && p == Puppeteer.puppeteer) {
-                    name = "Puppeteer";
+                    name = "傀儡师";
                     color = Puppeteer.color;
                     isGood = false;
                 }
                 else if (p.Data.Role.IsImpostor) { // Just Impostor
-                    name = "Impostor";
+                    name = "伪装者";
                     color = Palette.ImpostorRed;
                     isGood = false;
                 }
                 else { // Just Crewmate
-                    name = "Crewmate";
+                    name = "船员";
                     color = Kid.color;
                 }
 
