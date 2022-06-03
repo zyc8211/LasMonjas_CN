@@ -143,7 +143,7 @@ namespace LasMonjas.Objects
                                 MapBehaviour.Instance.Close();
                             }
                             SoundManager.Instance.PlaySound(CustomMain.customAssets.treasureHunterPlaceTreasure, false, 100f);
-                            new CustomMessage("Speed changed!", 5, -1, 1f, 23);
+                            new CustomMessage("速度变更!", 5, -1, 1f, 23);
                         }
 
                         PlayerControl target = Helpers.playerById(player.PlayerId);
