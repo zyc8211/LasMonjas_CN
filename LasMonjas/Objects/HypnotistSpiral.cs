@@ -159,7 +159,7 @@ namespace LasMonjas.Objects
                         if (MapBehaviour.Instance) {
                             MapBehaviour.Instance.Close();
                         }
-                        new CustomMessage("Hypnotized!", Hypnotist.spiralDuration, -1, 1.3f, 22);
+                        new CustomMessage("你被催眠了!", Hypnotist.spiralDuration, -1, 1.3f, 22);
                         PlayerControl target = Helpers.playerById(player.PlayerId);
                         MessageWriter killWriter = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.ActivateSpiralTrap, Hazel.SendOption.Reliable, -1);
                         killWriter.Write(player.PlayerId);
