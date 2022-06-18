@@ -100,14 +100,14 @@ namespace LasMonjas.Core
 
             var text = button.transform.GetChild(0).GetComponent<TMP_Text>();
             string t = "Update";
-            if (SubmergedUpdate != null) t = SubmergedCompatibility.Loaded ? $"Update\nSubmerged" : $"Download\nSubmerged";
+            if (SubmergedUpdate != null) t = SubmergedCompatibility.Loaded ? $"更新\n潜艇地图" : $"下载\n潜艇地图";
 
             StartCoroutine(Effects.Lerp(0.1f, (System.Action<float>)(p => text.SetText(t))));
 
             buttonSprite.color = text.color = Color.cyan;
             passiveButton.OnMouseOut.AddListener((Action)(() => buttonSprite.color = text.color = Color.cyan));
 
-            var announcement = $"<size=150%>A new <color=#00FFFF>{("Submerged")}</color> update to {(SubmergedUpdate.Tag)} is available</size>\n{(SubmergedUpdate.Content)}";
+            var announcement = $"<size=150%>一个 <color=#00FFFF>{("Submerged")}</color> 可用的 {(SubmergedUpdate.Tag)} 更新</size>\n{(SubmergedUpdate.Content)}";
             var mgr = FindObjectOfType<MainMenuManager>(true);
             if (!SubmergedCompatibility.Loaded) showPopUp = false;
             if (showPopUp) mgr.StartCoroutine(CoShowAnnouncement(announcement));
