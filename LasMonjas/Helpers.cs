@@ -28,7 +28,7 @@ namespace LasMonjas
                 Texture2D texture = loadTextureFromResources(path);
                 return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f), pixelsPerUnit);
             } catch {
-                System.Console.WriteLine("´ÓÂ·¾¶¼ÓÔØÍ¼ÐÎÊ±³ö´í: " + path);
+                System.Console.WriteLine("ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½: " + path);
             }
             return null;
         }
@@ -44,7 +44,7 @@ namespace LasMonjas
                 ImageConversion.LoadImage(texture, byteTexture, false);
                 return texture;
             } catch {
-                System.Console.WriteLine("´Ó×ÊÔ´ÖÐ¼ÓÔØÎÆÀíÊ±³ö´í: " + path);
+                System.Console.WriteLine("ï¿½ï¿½ï¿½ï¿½Ô´ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½: " + path);
             }
             return null;
         }
@@ -58,7 +58,7 @@ namespace LasMonjas
                     return texture;
                 }
             } catch {
-                System.Console.WriteLine("´ÓÓ²ÅÌÖÐ¼ÓÔØÎÆÀíÊ±³ö´í: " + path);
+                System.Console.WriteLine("ï¿½ï¿½Ó²ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½: " + path);
             }
             return null;
         }
@@ -127,8 +127,8 @@ namespace LasMonjas
                 task.transform.SetParent(player.transform, false);
 
                 if (roleInfo.name == "Renegade") {
-                    var getMinionText = Renegade.canRecruitMinion ? " ÕÐÄ¼Ò»¸ö×¦ÑÀ" : "";
-                    task.Text = cs(roleInfo.color, $"{roleInfo.name}: É±ËÀËùÓÐÈË{getMinionText}");  
+                    var getMinionText = Renegade.canRecruitMinion ? " ï¿½ï¿½Ä¼Ò»ï¿½ï¿½×¦ï¿½ï¿½" : "";
+                    task.Text = cs(roleInfo.color, $"{roleInfo.name}: É±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½{getMinionText}");  
                 } else {
                     task.Text = cs(roleInfo.color, $"{roleInfo.name}: {roleInfo.shortDescription}");  
                 }
@@ -515,8 +515,8 @@ namespace LasMonjas
                 if (cam != null && cam.gameObject.name == "UI Camera") cam.orthographicSize *= zoomFactor;  // The UI is scaled too, else we cant click the buttons. Downside: map is super small.
             }
 
-           // HudManagerStartPatch.zoomOutButton.Sprite = HudManagerStartPatch.zoomOutStatus ? Helpers.loadSpriteFromResources("LasMonjas.Images.PlusButton.png", 150f / zoomFactor * 2) : Helpers.loadSpriteFromResources("LasMonjas.Images.MinusButton.png", 150f);
-           // HudManagerStartPatch.zoomOutButton.PositionOffset = HudManagerStartPatch.zoomOutStatus ? new Vector3(0f, 3f, 0) : new Vector3(0.4f, 2.8f, 0);
+            HudManagerStartPatch.zoomOutButton.Sprite = HudManagerStartPatch.zoomOutStatus ? Helpers.loadSpriteFromResources("LasMonjas.Images.PlusButton.png", 150f / zoomFactor * 2) : Helpers.loadSpriteFromResources("LasMonjas.Images.MinusButton.png", 150f);
+            HudManagerStartPatch.zoomOutButton.PositionOffset = HudManagerStartPatch.zoomOutStatus ? new Vector3(0f, 3f, 0) : new Vector3(0.4f, 2.8f, 0);
             ResolutionManager.ResolutionChanged.Invoke((float)Screen.width / Screen.height); // This will move button positions to the correct position.
         }
 

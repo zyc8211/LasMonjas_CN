@@ -134,7 +134,7 @@ namespace LasMonjas.Patches {
                         MeetingHud.VoterState voterState = states[j];
                         GameData.PlayerInfo playerById = GameData.Instance.GetPlayerById(voterState.VoterId);
                         if (playerById == null) {
-                            Debug.LogError(string.Format("ÕÒ²»µ½Í¶Æ±ÈËÐÅÏ¢: {0}", voterState.VoterId));
+                            Debug.LogError(string.Format("ï¿½Ò²ï¿½ï¿½ï¿½Í¶Æ±ï¿½ï¿½ï¿½ï¿½Ï¢: {0}", voterState.VoterId));
                         } else if (i == 0 && voterState.SkippedVote && !playerById.IsDead) {
                             __instance.BloopAVoteIcon(playerById, num, __instance.SkippedVoting.transform);
                             num++;
@@ -458,7 +458,7 @@ namespace LasMonjas.Patches {
                 }
             }
             // Reset zoomed out ghosts
-         //   Helpers.toggleZoom(reset: true);
+            Helpers.toggleZoom(reset: true);
         }
     }
 }
