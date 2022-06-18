@@ -205,15 +205,23 @@ namespace LasMonjas
             }
             return result;
         }
-
         public static bool hidePlayerName(PlayerControl source, PlayerControl target) {
-            if (Painter.painterTimer > 0f) return true; // No names are visible
-            else if (!MapOptions.hidePlayerNames) return false; // All names are visible
-            else if (source == null || target == null) return true;
-            else if (source == target) return false; // Player sees his own name
-            else if (source.Data.Role.IsImpostor && target.Data.Role.IsImpostor) return false; // Members of team Impostors see the names of Impostors
-            else if ((source == Modifiers.lover1 || source == Modifiers.lover2) && (target == Modifiers.lover1 || target == Modifiers.lover2)) return false; // Members of team Lovers see the names of each other
-            else if ((source == Renegade.renegade || source == Minion.minion) && (target == Renegade.renegade || target == Minion.minion || target == Renegade.fakeMinion)) return false; // Members of team Renegade see the names of each other
+            if (source == target) return false;
+            if (source == null || target == null) return true;
+            if (source.Data.IsDead) return false;
+            if (target.Data.IsDead) return true;
+            if (Painter.painterTimer > 0f) return true; // No names are visible          
+            if (AmongUsClient.Instance.GameState == InnerNet.InnerNetClient.GameStates.Started && ShipStatus.Instance != null && source.transform != null && target.transform != null){
+                float distMod = 1.025f;
+                float distance = Vector3.Distance(source.transform.position, target.transform.position);
+                bool anythingBetween = PhysicsHelpers.AnythingBetween(source.transform.position, target.transform.position, Constants.ShadowMask, false);
+
+                if (distance > ShipStatus.Instance.CalculateLightRadius(source.Data) * distMod || anythingBetween) return true;
+            }
+            if (!MapOptions.hidePlayerNames) return false; // All names are visible
+            if (source.Data.Role.IsImpostor && target.Data.Role.IsImpostor) return false; // Members of team Impostors see the names of Impostors
+            if (source.getPartner() == target) return false; // Members of team Lovers see the names of each other
+            if ((source == Renegade.renegade || source == Minion.minion) && (target == Renegade.renegade || target == Minion.minion || target == Renegade.fakeMinion)) return false; // Members of team Renegade see the names of each other
             return true;
         }
 
@@ -289,8 +297,7 @@ namespace LasMonjas
                             || PlayerControl.LocalPlayer == PoliceAndThief.thiefplayer06 && !PoliceAndThief.thiefplayer06IsStealing && !PoliceAndThief.thiefplayer06IsReviving
                             || PlayerControl.LocalPlayer == PoliceAndThief.thiefplayer07 && !PoliceAndThief.thiefplayer07IsStealing && !PoliceAndThief.thiefplayer07IsReviving
                             || PlayerControl.LocalPlayer == PoliceAndThief.thiefplayer08 && !PoliceAndThief.thiefplayer08IsStealing && !PoliceAndThief.thiefplayer08IsReviving
-                            || PlayerControl.LocalPlayer == PoliceAndThief.thiefplayer09 && !PoliceAndThief.thiefplayer09IsStealing && !PoliceAndThief.thiefplayer09IsReviving
-                            || PlayerControl.LocalPlayer == PoliceAndThief.thiefplayer10 && !PoliceAndThief.thiefplayer10IsStealing && !PoliceAndThief.thiefplayer10IsReviving) {
+                            || PlayerControl.LocalPlayer == PoliceAndThief.thiefplayer09 && !PoliceAndThief.thiefplayer09IsStealing && !PoliceAndThief.thiefplayer09IsReviving) {
                             roleCouldUse = true;
                         }
                         else {
@@ -476,5 +483,43 @@ namespace LasMonjas
             SubmergedCompatibility.DisableO2MaskCheckForEmergency = false;
             return false;
         }
+
+        public static void enableCursor(string mode)
+        {
+            if (mode == "start")
+            {
+                Sprite sprite = Helpers.loadSpriteFromResources("LasMonjas.Images.Cursor.png", 115f);
+                Cursor.SetCursor(sprite.texture, Vector2.zero, CursorMode.Auto);
+                return;
+            }
+            if (LasMonjasPlugin.MonjaCursor.Value)
+            {
+                Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            }
+            else
+            {
+                Sprite sprite = Helpers.loadSpriteFromResources("LasMonjas.Images.Cursor.png", 115f);
+                Cursor.SetCursor(sprite.texture, Vector2.zero, CursorMode.Auto);
+            }
+        }
+        public static void toggleZoom(bool reset = false)
+        {
+            float zoomFactor = 4f;
+            if (HudManagerStartPatch.zoomOutStatus)
+                zoomFactor = 1 / zoomFactor;
+            else if (reset) return; // Dont zoom out if meant to reset.
+            HudManagerStartPatch.zoomOutStatus = !HudManagerStartPatch.zoomOutStatus;
+            Camera.main.orthographicSize *= zoomFactor;
+            foreach (var cam in Camera.allCameras)
+            {
+                if (cam != null && cam.gameObject.name == "UI Camera") cam.orthographicSize *= zoomFactor;  // The UI is scaled too, else we cant click the buttons. Downside: map is super small.
+            }
+
+           // HudManagerStartPatch.zoomOutButton.Sprite = HudManagerStartPatch.zoomOutStatus ? Helpers.loadSpriteFromResources("LasMonjas.Images.PlusButton.png", 150f / zoomFactor * 2) : Helpers.loadSpriteFromResources("LasMonjas.Images.MinusButton.png", 150f);
+           // HudManagerStartPatch.zoomOutButton.PositionOffset = HudManagerStartPatch.zoomOutStatus ? new Vector3(0f, 3f, 0) : new Vector3(0.4f, 2.8f, 0);
+            ResolutionManager.ResolutionChanged.Invoke((float)Screen.width / Screen.height); // This will move button positions to the correct position.
+        }
+
+
     }
 }

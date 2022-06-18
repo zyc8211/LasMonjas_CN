@@ -22,13 +22,14 @@ namespace LasMonjas
         // Global Settings
         public static CustomOption globalSettings;
         public static CustomOption activateRoles;
-        public static CustomOption nightVisionLightSabotage;
         public static CustomOption activateSenseiMap;
         public static CustomOption removeSwipeCard;
         public static CustomOption removeAirshipDoors;
+        public static CustomOption nightVisionLightSabotage;
         public static CustomOption screenShakeReactorSabotage;
         public static CustomOption anonymousCommsSabotage;
         public static CustomOption slowSpeedOxigenSabotage;
+        public static CustomOption hideVentAnimOnShadows;
 
         // Modifiers
         public static CustomOption activateModifiers;
@@ -56,13 +57,14 @@ namespace LasMonjas
         public static CustomOption thiefModeMatchDuration;
         public static CustomOption thiefModerequiredJewels;
         public static CustomOption thiefModePoliceKillCooldown;
-        public static CustomOption thiefModePoliceCanKillNearPrison;
+        public static CustomOption thiefModePoliceTaseCooldown;
+        public static CustomOption thiefModePoliceTaseDuration;
         public static CustomOption thiefModePoliceCanSeeJewels;
         public static CustomOption thiefModePoliceCatchCooldown;
         public static CustomOption thiefModecaptureThiefTime;
         public static CustomOption thiefModepolicevision;
         public static CustomOption thiefModePoliceReviveTime;
-        public static CustomOption thiefModeCanKill;
+        public static CustomOption thiefModeWhoCanThiefsKill;
         public static CustomOption thiefModeKillCooldown;
         public static CustomOption thiefModeThiefReviveTime;
         public static CustomOption thiefModeInvincibilityTimeAfterRevive;
@@ -408,6 +410,7 @@ namespace LasMonjas
             screenShakeReactorSabotage = CustomOption.Create(9, cs(Detective.color, "反应堆破坏时震动屏幕"), "setting", false, globalSettings);
             anonymousCommsSabotage = CustomOption.Create(10, cs(Detective.color, "通讯破坏时进入隐蔽状态"), "setting", false, globalSettings);
             slowSpeedOxigenSabotage = CustomOption.Create(11, cs(Detective.color, "氧气破坏时降低行动速度"), "setting", false, globalSettings);
+            hideVentAnimOnShadows = CustomOption.Create(12, cs(Detective.color, "隐藏阴影中的通风口动画"), "setting", false, globalSettings);
 
             // Modifiers
             activateModifiers = CustomOption.Create(15, cs(Modifiers.color, "附加职业"), "setting", false, null, true);
@@ -435,16 +438,17 @@ namespace LasMonjas
             thiefModeMatchDuration = CustomOption.Create(41, cs(Coward.color, "警察抓小偷") + ": 比赛时长", "gamemode", 300f, 300f, 450f, 30f, policeAndThiefMode);
             thiefModerequiredJewels = CustomOption.Create(42, cs(Coward.color, "警察抓小偷") + ": 珠宝数量", "gamemode", 15f, 8f, 15f, 1f, policeAndThiefMode);
             thiefModePoliceKillCooldown = CustomOption.Create(43, cs(Coward.color, "警察抓小偷") + ": 警察击杀冷却", "gamemode", 15f, 10f, 20f, 1f, policeAndThiefMode);
-            thiefModePoliceCanKillNearPrison = CustomOption.Create(44, cs(Coward.color, "警察抓小偷") + ": 警察可以在监狱附近击杀", "gamemode", false, policeAndThiefMode);
-            thiefModePoliceCanSeeJewels = CustomOption.Create(45, cs(Coward.color, "警察抓小偷") + ": 警察可以看见珠宝", "gamemode", false, policeAndThiefMode);
-            thiefModePoliceCatchCooldown = CustomOption.Create(46, cs(Coward.color, "警察抓小偷") + ": 逮捕冷却", "gamemode", 10f, 5f, 15f, 1f, policeAndThiefMode);
-            thiefModecaptureThiefTime = CustomOption.Create(47, cs(Coward.color, "警察抓小偷") + ": 逮捕所需时间", "gamemode", 3f, 2f, 5f, 1f, policeAndThiefMode);
-            thiefModepolicevision = CustomOption.Create(48, cs(Coward.color, "警察抓小偷") + ": 警察视野范围", "gamemode", 0.8f, 0.4f, 1.4f, 0.2f, policeAndThiefMode);
-            thiefModePoliceReviveTime = CustomOption.Create(49, cs(Coward.color, "警察抓小偷") + ": 警察复活等待时间", "gamemode", 8f, 8f, 13f, 1f, policeAndThiefMode);
-            thiefModeCanKill = CustomOption.Create(50, cs(Coward.color, "警察抓小偷") + ": 小偷可击杀", "gamemode", false, policeAndThiefMode);
-            thiefModeKillCooldown = CustomOption.Create(51, cs(Coward.color, "警察抓小偷") + ": 小偷击杀冷却", "gamemode", 20f, 15f, 30f, 1f, policeAndThiefMode);
-            thiefModeThiefReviveTime = CustomOption.Create(52, cs(Coward.color, "警察抓小偷") + ": 小偷复活等待时间", "gamemode", 13f, 13f, 23f, 1f, policeAndThiefMode);
-            thiefModeInvincibilityTimeAfterRevive = CustomOption.Create(53, cs(Coward.color, "警察抓小偷") + ": 复活后无敌时间", "gamemode", 3f, 2f, 5f, 1f, policeAndThiefMode);
+            thiefModePoliceCatchCooldown = CustomOption.Create(44, cs(Coward.color, "警察抓小偷") + ": 警察逮捕冷却", "gamemode", 10f, 5f, 15f, 1f, policeAndThiefMode);
+            thiefModecaptureThiefTime = CustomOption.Create(45, cs(Coward.color, "警察抓小偷") + ": 逮捕所需时间", "gamemode", 3f, 2f, 5f, 1f, policeAndThiefMode);
+            thiefModePoliceTaseCooldown = CustomOption.Create(46, cs(Coward.color, "警察抓小偷") + ": 警察电击枪冷却", "gamemode", 15f, 10f, 20f, 1f, policeAndThiefMode);
+            thiefModePoliceTaseDuration = CustomOption.Create(47, cs(Coward.color, "警察抓小偷") + ": 警察电击枪持续时间", "gamemode", 3f, 3f, 5f, 1f, policeAndThiefMode);
+            thiefModePoliceCanSeeJewels = CustomOption.Create(48, cs(Coward.color, "警察抓小偷") + ": 警察可见宝石", "gamemode", false, policeAndThiefMode);
+            thiefModepolicevision = CustomOption.Create(49, cs(Coward.color, "警察抓小偷") + ": 警察视野范围", "gamemode", 0.8f, 0.4f, 1.4f, 0.2f, policeAndThiefMode);
+            thiefModePoliceReviveTime = CustomOption.Create(50, cs(Coward.color, "警察抓小偷") + ": 警察复活等待时间", "gamemode", 8f, 8f, 13f, 1f, policeAndThiefMode);
+            thiefModeWhoCanThiefsKill = CustomOption.Create(51, cs(Coward.color, "警察抓小偷") + ": 小偷可击杀", "gamemode", new string[] { "电击枪", "所有人", "无" }, policeAndThiefMode);
+            thiefModeKillCooldown = CustomOption.Create(52, cs(Coward.color, "警察抓小偷") + ": 小偷击杀冷却", "gamemode", 20f, 15f, 30f, 1f, policeAndThiefMode);
+            thiefModeThiefReviveTime = CustomOption.Create(53, cs(Coward.color, "警察抓小偷") + ": 小偷复活等待时间", "gamemode", 13f, 13f, 23f, 1f, policeAndThiefMode);
+            thiefModeInvincibilityTimeAfterRevive = CustomOption.Create(54, cs(Coward.color, "警察抓小偷") + ": 复活后无敌时间", "gamemode", 3f, 2f, 5f, 1f, policeAndThiefMode);
 
             // King of the hill mode
             kingOfTheHillMode = CustomOption.Create(60, cs(Squire.color, "山丘之王"), "gamemode", false, null, true);
@@ -463,7 +467,7 @@ namespace LasMonjas
             hotPotatoCooldown = CustomOption.Create(73, cs(Shy.color, "烫手山芋") + ": 烫手山芋传递冷却", "gamemode", 5f, 5f, 10f, 1f, hotPotatoMode);
             hotPotatoNotPotatovision = CustomOption.Create(74, cs(Shy.color, "烫手山芋") + ": 冷山芋视野", "gamemode", 0.8f, 0.7f, 1f, 0.1f, hotPotatoMode);
             hotPotatoResetTimeForTransfer = CustomOption.Create(75, cs(Shy.color, "烫手山芋") + ": 传递后重置烫手山芋爆炸倒计时", "gamemode", true, hotPotatoMode);
-            hotPotatoIncreaseTimeIfNoReset = CustomOption.Create(76, cs(Shy.color, "烫手山芋") + ": Extra Time when timer doesn't reset", "gamemode", 5f, 5f, 10f, 1f, hotPotatoMode);
+            hotPotatoIncreaseTimeIfNoReset = CustomOption.Create(76, cs(Shy.color, "烫手山芋") + ": 不重置倒计时时追加时间", "gamemode", 5f, 5f, 10f, 1f, hotPotatoMode);
 
             // ZombieLaboratory
             zombieLaboratoryMode = CustomOption.Create(80, cs(Hunter.color, "生化危机"), "gamemode", false, null, true);
@@ -474,7 +478,7 @@ namespace LasMonjas
             zombieLaboratorySearchBoxTimer = CustomOption.Create(85, cs(Hunter.color, "生化危机") + ": 幸存者打开箱子所需时间", "gamemode", 5f, 3f, 5f, 1f, zombieLaboratoryMode);
             zombieLaboratorySurvivorsVision = CustomOption.Create(86, cs(Hunter.color, "生化危机") + ": 幸存者视野", "gamemode", 0.8f, 0.8f, 1f, 0.1f, zombieLaboratoryMode);
             zombieLaboratoryTimeForHeal = CustomOption.Create(87, cs(Hunter.color, "生化危机") + ": 护士治愈受感染者所需时间", "gamemode", 15f, 10f, 30f, 1f, zombieLaboratoryMode);
-            zombieLaboratoryWhoCanZombiesKill = CustomOption.Create(88, cs(Hunter.color, "生化危机") + ": 僵尸可击杀目标", "gamemode", new string[] { "Survivors", "All", "Nobody" }, zombieLaboratoryMode);
+            zombieLaboratoryWhoCanZombiesKill = CustomOption.Create(88, cs(Hunter.color, "生化危机") + ": 僵尸可击杀目标", "gamemode", new string[] { "幸存者", "所有人", "无" }, zombieLaboratoryMode);
             zombieLaboratoryKillCooldown = CustomOption.Create(89, cs(Hunter.color, "生化危机") + ": 击杀冷却", "gamemode", 10f, 10f, 20f, 1f, zombieLaboratoryMode);
             zombieLaboratoryReviveTime = CustomOption.Create(90, cs(Hunter.color, "生化危机") + ": 复活所需时间", "gamemode", 8f, 8f, 13f, 1f, zombieLaboratoryMode);
             zombieLaboratoryInvincibilityTimeAfterRevive = CustomOption.Create(91, cs(Hunter.color, "生化危机") + ": 复活后的无敌时间", "gamemode", 3f, 2f, 5f, 1f, zombieLaboratoryMode);
@@ -630,7 +634,7 @@ namespace LasMonjas
 
             // Detective options
             detectiveSpawnRate = CustomOption.Create(450, cs(Detective.color, "侦探"), "crewmate", rates, null, true);
-            detectiveShowFootprints = CustomOption.Create(451, cs(Detective.color, "侦探") + ": 显示脚印", "crewmate", new string[] { "Button Use", "Always" }, detectiveSpawnRate);
+            detectiveShowFootprints = CustomOption.Create(451, cs(Detective.color, "侦探") + ": 显示脚印", "crewmate", new string[] { "技能按钮", "一直显示" }, detectiveSpawnRate);
             detectiveCooldown = CustomOption.Create(452, cs(Detective.color, "侦探") + ": 技能冷却", "crewmate", 15f, 10f, 20f, 1f, detectiveSpawnRate);
             detectiveShowFootPrintDuration = CustomOption.Create(453, cs(Detective.color, "侦探") + ": 脚印显示时间", "crewmate", 10f, 10f, 15f, 1f, detectiveSpawnRate); 
             detectiveAnonymousFootprints = CustomOption.Create(454, cs(Detective.color, "侦探") + ": 匿名脚印", "crewmate", false, detectiveSpawnRate);
