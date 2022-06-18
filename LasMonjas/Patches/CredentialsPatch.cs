@@ -35,7 +35,7 @@ namespace LasMonjas.Patches {
 
             static void Postfix(PingTracker __instance) {
 
-                __instance.text.text += "\n<color=#CC00FFFF>Las Monjas v2.0.1</color>\n汉化：<color=#FF0000>四个憨批汉化组</color>\n<size=70%>翻译：<color=#BBFFEE>凌霄LX</color> <color=#0000FF>氢氧则名</color> <color=#FFFF37>山羊</color> 美工：<color=#FFC0CB>糖果</color> 实装：<color=#BBFFEE>凌霄LX</color>\n憨批小站：https://amonguscn.club</size>";
+                __instance.text.text += "\n<color=#CC00FFFF>Las Monjas v2.0.3</color>\n汉化：<color=#FF0000>四个憨批汉化组</color>\n<size=50%>翻译：<color=#BBFFEE>凌霄LX</color> <color=#0000FF>氢氧则名</color> <color=#FFFF37>山羊</color> 美工：<color=#FFC0CB>糖果</color> 实装：<color=#BBFFEE>凌霄LX</color>\n憨批小站：https://amonguscn.club</size>";
                 __instance.transform.localPosition = new Vector3(1.25f, 3f, __instance.transform.localPosition.z);
             }
         }     

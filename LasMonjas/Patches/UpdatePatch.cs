@@ -91,7 +91,12 @@ namespace LasMonjas.Patches {
                 else if (PoliceAndThief.policeAndThiefMode) {
                     foreach (PlayerControl policeplayer in PoliceAndThief.policeTeam) {
                         if (policeplayer != null) {
-                            setPlayerNameColor(policeplayer, Palette.PlayerColors[10]);
+                            if (PoliceAndThief.policeplayer02 != null && policeplayer == PoliceAndThief.policeplayer02 || PoliceAndThief.policeplayer04 != null && policeplayer == PoliceAndThief.policeplayer04) {
+                                setPlayerNameColor(policeplayer, Palette.PlayerColors[5]);
+                            }
+                            else {
+                                setPlayerNameColor(policeplayer, Palette.PlayerColors[10]);
+                            }
                         }
                     }
                     foreach (PlayerControl thiefplayer in PoliceAndThief.thiefTeam) {
@@ -448,6 +453,7 @@ namespace LasMonjas.Patches {
                     PoliceAndThief.policeplayer03lightTimer -= Time.deltaTime;
                     PoliceAndThief.policeplayer04lightTimer -= Time.deltaTime;
                     PoliceAndThief.policeplayer05lightTimer -= Time.deltaTime;
+                    PoliceAndThief.policeplayer06lightTimer -= Time.deltaTime;
 
                     PoliceAndThief.matchDuration -= Time.deltaTime;
                     if (PoliceAndThief.matchDuration < 0) {
@@ -538,7 +544,12 @@ namespace LasMonjas.Patches {
                     p.transform.localScale = new Vector3(0.45f, 0.45f, 1f);
                 // big chungus update, restore original scale on duel and painting to be more fair
                 else if (Modifiers.bigchungus != null && Modifiers.bigchungus == p && !Challenger.isDueling && Painter.painterTimer <= 0 && !isHappeningAnonymousComms) {
-                    p.transform.localScale = new Vector3(0.9f, 0.9f, 1f);
+                    if (Puppeteer.puppeteer != null && Puppeteer.morphed && Puppeteer.puppeteer.PlayerId == Modifiers.bigchungus.PlayerId) {
+                        p.transform.localScale = new Vector3(0.7f, 0.7f, 1f);
+                    }
+                    else {
+                        p.transform.localScale = new Vector3(0.9f, 0.9f, 1f);
+                    }
                 }
                 // Mimic and Puppeteer big chungus update
                 else if (Mimic.mimic != null && Mimic.mimic == p && Mimic.transformTarget != null && Mimic.transformTarget == Modifiers.bigchungus && Mimic.transformTimer > 0f && !isHappeningAnonymousComms)
@@ -1191,10 +1202,6 @@ namespace LasMonjas.Patches {
                         PoliceAndThief.thiefTeam.Remove(PoliceAndThief.thiefplayer09);
                         RPCProcedure.policeandThiefRevertedJewelPosition(thief.PlayerId, PoliceAndThief.thiefplayer09JewelId);
                     }
-                    else if (PoliceAndThief.thiefplayer10 != null && thief.PlayerId == PoliceAndThief.thiefplayer10.PlayerId && PoliceAndThief.thiefplayer10IsStealing) {
-                        PoliceAndThief.thiefTeam.Remove(PoliceAndThief.thiefplayer10);
-                        RPCProcedure.policeandThiefRevertedJewelPosition(thief.PlayerId, PoliceAndThief.thiefplayer10JewelId);
-                    }
 
                     PoliceAndThief.thiefpointCounter = "Stealed Jewels: " + "<color=#00F7FFFF>" + PoliceAndThief.currentJewelsStoled + "/" + PoliceAndThief.requiredJewels + "</color> | " + "Thiefs Captured: " + "<color=#928B55FF>" + PoliceAndThief.currentThiefsCaptured + "/" + PoliceAndThief.thiefTeam.Count + "</color>";
                     if (PoliceAndThief.currentThiefsCaptured == PoliceAndThief.thiefTeam.Count) {
@@ -1221,6 +1228,9 @@ namespace LasMonjas.Patches {
                     }
                     else if (PoliceAndThief.policeplayer05 != null && police.PlayerId == PoliceAndThief.policeplayer05.PlayerId) {
                         PoliceAndThief.policeTeam.Remove(PoliceAndThief.policeplayer05);
+                    }
+                    else if (PoliceAndThief.policeplayer06 != null && police.PlayerId == PoliceAndThief.policeplayer06.PlayerId) {
+                        PoliceAndThief.policeTeam.Remove(PoliceAndThief.policeplayer06);
                     }
 
                     if (PoliceAndThief.policeTeam.Count <= 0) {
@@ -1251,6 +1261,7 @@ namespace LasMonjas.Patches {
                 KingOfTheHill.greenkingaura.transform.parent = KingOfTheHill.greenKingplayer.transform;
                 if (PlayerControl.LocalPlayer == KingOfTheHill.greenKingplayer) {
                     new CustomMessage("你是新的 <color=#00FF00FF>绿队国王</color>!", 5, -1, 1.6f, 11);
+                    KingOfTheHill.localArrows[3].arrow.SetActive(false);
                 }
                 KingOfTheHill.greenKingIsReviving = false;
 
@@ -1292,6 +1303,7 @@ namespace LasMonjas.Patches {
                 KingOfTheHill.yellowkingaura.transform.parent = KingOfTheHill.yellowKingplayer.transform;
                 if (PlayerControl.LocalPlayer == KingOfTheHill.yellowKingplayer) {
                     new CustomMessage("你是新的 <color=#FFFF00FF>黄队国王</color>!", 5, -1, 1.6f, 11);
+                    KingOfTheHill.localArrows[3].arrow.SetActive(false);
                 }
                 KingOfTheHill.yellowKingIsReviving = false;
 

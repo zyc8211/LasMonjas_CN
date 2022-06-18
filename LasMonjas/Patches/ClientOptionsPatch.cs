@@ -19,6 +19,7 @@ namespace LasMonjas.Patches
             new SelectionBehaviour("激活音乐", () => MapOptions.activateMusic = LasMonjasPlugin.ActivateMusic.Value = !LasMonjasPlugin.ActivateMusic.Value, LasMonjasPlugin.ActivateMusic.Value),
             new SelectionBehaviour("死亡可\n显示职业", () => MapOptions.ghostsSeeRoles = LasMonjasPlugin.GhostsSeeRoles.Value = !LasMonjasPlugin.GhostsSeeRoles.Value, LasMonjasPlugin.GhostsSeeRoles.Value),
             new SelectionBehaviour("马模式", () => MapOptions.horseMode = LasMonjasPlugin.HorseMode.Value = !LasMonjasPlugin.HorseMode.Value, LasMonjasPlugin.HorseMode.Value),
+            new SelectionBehaviour("模组光标", () => MapOptions.monjaCursor = LasMonjasPlugin.MonjaCursor.Value = !LasMonjasPlugin.MonjaCursor.Value, LasMonjasPlugin.MonjaCursor.Value),
         };
         
         private static GameObject popUp;
@@ -178,6 +179,9 @@ namespace LasMonjas.Patches
 
                 passiveButton.OnClick.AddListener((Action) (() =>
                 {
+                    if (info.Title == "Monja Cursor"){
+                        Helpers.enableCursor("toggle");
+                    }
                     button.onState = info.OnClick();
                     button.Background.color = button.onState ? Color.green : Palette.ImpostorRed;
                 }));

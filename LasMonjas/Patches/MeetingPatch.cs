@@ -457,6 +457,8 @@ namespace LasMonjas.Patches {
                     Puppeteer.currentTarget = null;
                 }
             }
+            // Reset zoomed out ghosts
+         //   Helpers.toggleZoom(reset: true);
         }
     }
 }
